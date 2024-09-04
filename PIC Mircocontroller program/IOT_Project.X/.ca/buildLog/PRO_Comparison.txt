@@ -1,0 +1,117 @@
+make -f nbproject/Makefile-PRO_Comparison.mk SUBPROJECTS= .clean-conf
+make[1]: Entering directory 'E:/PIC Mircocontroller program/IOT_Project.X'
+rm -f  -r .ca/build/PRO_Comparison/production
+rm -f  -r .ca/dist/PRO_Comparison/production
+make[1]: Leaving directory 'E:/PIC Mircocontroller program/IOT_Project.X'
+[32mCLEAN SUCCESSFUL (total time: 153ms)[0m
+make -f nbproject/Makefile-PRO_Comparison.mk SUBPROJECTS= .build-conf
+make  -f nbproject/Makefile-PRO_Comparison.mk .ca/dist/PRO_Comparison/production/IOT_Project.X.production.hex
+make[2]: Entering directory 'E:/PIC Mircocontroller program/IOT_Project.X'
+"C:\Program Files\Microchip\xc8\v2.46\bin\xc8-cc.exe"  -mcpu=16F877A -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8"  -fno-short-double -fno-short-float -DXPRJ_PRO_Comparison=PRO_Comparison  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto -mafrlcsj     -o .ca/build/PRO_Comparison/production/IOTProject.p1 IOTProject.c 
+::: advisory: (2100) using the C99 standard library with the selected device may result in larger code and data usage
+IOTProject.c:18:10: warning: non-portable path to file '"DHT22.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "dht22.h"
+         ^~~~~~~~~
+         "DHT22.h"
+IOTProject.c:19:10: warning: non-portable path to file '"I2C.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "i2c.h"
+         ^~~~~~~
+         "I2C.h"
+IOTProject.c:20:10: warning: non-portable path to file '"MLX90614.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "mlx90614.h"
+         ^~~~~~~~~~~~
+         "MLX90614.h"
+IOTProject.c:21:10: warning: non-portable path to file '"MAX4466.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "max4466.h"
+         ^~~~~~~~~~~
+         "MAX4466.h"
+IOTProject.c:22:10: warning: non-portable path to file '"MHZ19.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "mhz19.h"
+         ^~~~~~~~~
+         "MHZ19.h"
+IOTProject.c:23:10: warning: non-portable path to file '"MQ131.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "mq131.h"
+         ^~~~~~~~~
+         "MQ131.h"
+IOTProject.c:24:10: warning: non-portable path to file '"MICS5524.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "mics5524.h"
+         ^~~~~~~~~~~~
+         "MICS5524.h"
+IOTProject.c:25:10: warning: non-portable path to file '"RF_MODULE.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "rf_module.h"
+         ^~~~~~~~~~~~~
+         "RF_MODULE.h"
+IOTProject.c:26:10: warning: non-portable path to file '"WIFI_MODULE.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "wifi_module.h"
+         ^~~~~~~~~~~~~~~
+         "WIFI_MODULE.h"
+IOTProject.c:33:9: warning: 'MAX4466_PIN' macro redefined [-Wmacro-redefined]
+#define MAX4466_PIN   RA0
+        ^
+./max4466.h:7:9: note: previous definition is here
+#define MAX4466_PIN   0  // Example: AN0 (RA0)
+        ^
+IOTProject.c:36:9: warning: 'MQ131_PIN' macro redefined [-Wmacro-redefined]
+#define MQ131_PIN     RA1
+        ^
+./mq131.h:7:9: note: previous definition is here
+#define MQ131_PIN   1  // Example: AN1 (RA1)
+        ^
+IOTProject.c:103:23: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        sound_level = MAX4466_Read();
+                    ~ ^~~~~~~~~~~~~~
+IOTProject.c:104:21: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        co2_level = MHZ19_ReadCO2();
+                  ~ ^~~~~~~~~~~~~~~
+IOTProject.c:105:23: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        ozone_level = MQ131_Read();
+                    ~ ^~~~~~~~~~~~
+IOTProject.c:106:21: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        gas_level = MICS5524_Read();
+                  ~ ^~~~~~~~~~~~~~~
+IOTProject.c:164:57: warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wconversion]
+        temperature = ((data[2] & 0x7F) << 8 | data[3]) * 0.1;
+                    ~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+IOTProject.c:186:45: warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wconversion]
+        humidity = (data[0] << 8 | data[1]) * 0.1;
+                 ~ ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+IOTProject.c:250:25: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    data |= I2C_Read(0) << 8;                   // Read MSB without acknowledgment
+         ~~ ~~~~~~~~~~~~^~~~
+IOTProject.c:259:29: warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wconversion]
+    return (rawData * 0.02) - 273.15; // Convert to Celsius
+    ~~~~~~ ~~~~~~~~~~~~~~~~~^~~~~~~~
+IOTProject.c:324:27: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    return ((ADRESH << 8) + ADRESL);  // Combine the 10-bit result
+    ~~~~~~  ~~~~~~~~~~~~~~^~~~~~~~
+IOTProject.c:347:30: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    co2 = (response[2] << 8) | response[3];
+        ~ ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+IOTProject.c:369:27: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    return ((ADRESH << 8) + ADRESL);  // Combine the 10-bit result
+    ~~~~~~  ~~~~~~~~~~~~~~^~~~~~~~
+IOTProject.c:387:27: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+    return ((ADRESH << 8) + ADRESL);  // Combine the 10-bit result
+    ~~~~~~  ~~~~~~~~~~~~~~^~~~~~~~
+IOTProject.c:431:35: warning: excess elements in char array initializer
+    unsigned char initCommand[] = WIFI_MODULE_CMD_INIT;
+                                  ^~~~~~~~~~~~~~~~~~~~
+./wifi_module.h:10:44: note: expanded from macro 'WIFI_MODULE_CMD_INIT'
+#define WIFI_MODULE_CMD_INIT      {"0xAT", 0x0D}       // Example command to initialize the Wi-Fi module
+                                           ^~~~
+24 warnings generated.
+make[2]: Leaving directory 'E:/PIC Mircocontroller program/IOT_Project.X'
+make[2]: Entering directory 'E:/PIC Mircocontroller program/IOT_Project.X'
+"C:\Program Files\Microchip\xc8\v2.46\bin\xc8-cc.exe"  -mcpu=16F877A -Wl,-Map=.ca/dist/PRO_Comparison/production/IOT_Project.X.production.map  -DXPRJ_PRO_Comparison=PRO_Comparison  -Wl,--defsym=__MPLAB_BUILD=1   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8"  -fno-short-double -fno-short-float -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits -mafrlcsj -std=c99 -gdwarf-3 -mstack=compiled:auto:auto      -Wl,--memorysummary,.ca/dist/PRO_Comparison/production/memoryfile.xml -o .ca/dist/PRO_Comparison/production/IOT_Project.X.production.elf  .ca/build/PRO_Comparison/production/IOTProject.p1     
+(908) exit status = 1
+::: advisory: (2100) using the C99 standard library with the selected device may result in larger code and data usage
+IOTProject.c:235:: warning: (520) function "_MLX90614_ReadObjectTemp" is never called
+IOTProject.c:401:: warning: (520) function "_RF_Module_Send" is never called
+IOTProject.c:412:: warning: (520) function "_RF_Module_Receive" is never called
+IOTProject.c:437:: error: (1250) could not find space (21 bytes) for variable WIFI_Module_Send@F1477
+(908) exit status = 1
+make[2]: Leaving directory 'E:/PIC Mircocontroller program/IOT_Project.X'
+[31mmake[2]: *** [nbproject/Makefile-PRO_Comparison.mk:134: .ca/dist/PRO_Comparison/production/IOT_Project.X.production.hex] Error 1
+make[1]: *** [nbproject/Makefile-PRO_Comparison.mk:85: .build-conf] Error 2
+make: *** [nbproject/Makefile-impl.mk:39: .build-impl] Error 2[0m
+[31mBUILD FAILED (exit value 2, total time: 5s)[0m

@@ -1,0 +1,96 @@
+make -f nbproject/Makefile-PRO_Comparison.mk SUBPROJECTS= .clean-conf
+make[1]: Entering directory 'E:/PIC Mircocontroller program/IOT_sensor_nd_gis_project.X'
+rm -f  -r .ca/build/PRO_Comparison/production
+rm -f  -r .ca/dist/PRO_Comparison/production
+make[1]: Leaving directory 'E:/PIC Mircocontroller program/IOT_sensor_nd_gis_project.X'
+[32mCLEAN SUCCESSFUL (total time: 254ms)[0m
+make -f nbproject/Makefile-PRO_Comparison.mk SUBPROJECTS= .build-conf
+make  -f nbproject/Makefile-PRO_Comparison.mk .ca/dist/PRO_Comparison/production/IOT_sensor_nd_gis_project.X.production.hex
+make[2]: Entering directory 'E:/PIC Mircocontroller program/IOT_sensor_nd_gis_project.X'
+"C:\Program Files\Microchip\xc8\v2.46\bin\xc8-cc.exe"  -mcpu=16F877A -c   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_PRO_Comparison=PRO_Comparison  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits   -std=c99 -gdwarf-3 -mstack=compiled:auto:auto -mafrlcsj     -o .ca/build/PRO_Comparison/production/iot_project.p1 iot_project.c 
+::: advisory: (2100) using the C99 standard library with the selected device may result in larger code and data usage
+iot_project.c:18:10: warning: non-portable path to file '"DHT22.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "dht22.h"
+         ^~~~~~~~~
+         "DHT22.h"
+iot_project.c:19:10: warning: non-portable path to file '"I2C.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "i2c.h"
+         ^~~~~~~
+         "I2C.h"
+iot_project.c:20:10: warning: non-portable path to file '"MLX90614.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "mlx90614.h"
+         ^~~~~~~~~~~~
+         "MLX90614.h"
+iot_project.c:21:10: warning: non-portable path to file '"MAX4466.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "max4466.h"
+         ^~~~~~~~~~~
+         "MAX4466.h"
+iot_project.c:22:10: warning: non-portable path to file '"MHZ19.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "mhz19.h"
+         ^~~~~~~~~
+         "MHZ19.h"
+iot_project.c:23:10: warning: non-portable path to file '"MQ131.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "mq131.h"
+         ^~~~~~~~~
+         "MQ131.h"
+iot_project.c:24:10: warning: non-portable path to file '"MICS5524.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "mics5524.h"
+         ^~~~~~~~~~~~
+         "MICS5524.h"
+iot_project.c:25:10: warning: non-portable path to file '"RF_MODULE.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "rf_module.h"
+         ^~~~~~~~~~~~~
+         "RF_MODULE.h"
+iot_project.c:26:10: warning: non-portable path to file '"WIFI_MODULE.h"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "wifi_module.h"
+         ^~~~~~~~~~~~~~~
+         "WIFI_MODULE.h"
+iot_project.c:33:9: warning: 'MAX4466_PIN' macro redefined [-Wmacro-redefined]
+#define MAX4466_PIN   RA0
+        ^
+./max4466.h:7:9: note: previous definition is here
+#define MAX4466_PIN   0  // Example: AN0 (RA0)
+        ^
+iot_project.c:36:9: warning: 'MQ131_PIN' macro redefined [-Wmacro-redefined]
+#define MQ131_PIN     RA1
+        ^
+./mq131.h:7:9: note: previous definition is here
+#define MQ131_PIN   1  // Example: AN1 (RA1)
+        ^
+iot_project.c:37:9: warning: 'MICS5524_PIN' macro redefined [-Wmacro-redefined]
+#define MICS5524_PIN  RA2
+        ^
+./mics5524.h:7:9: note: previous definition is here
+#define MICS5524_PIN   2  // Example: AN2 (RA2)
+        ^
+iot_project.c:69:5: warning: implicit declaration of function 'WiFi_Module_Init' is invalid in C99 [-Wimplicit-function-declaration]
+    WiFi_Module_Init();
+    ^
+iot_project.c:91:23: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        sound_level = MAX4466_Read();
+                    ~ ^~~~~~~~~~~~~~
+iot_project.c:92:21: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        co2_level = MHZ19_ReadCO2();
+                  ~ ^~~~~~~~~~~~~~~
+iot_project.c:93:23: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        ozone_level = MQ131_Read();
+                    ~ ^~~~~~~~~~~~
+iot_project.c:94:21: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+        gas_level = MICS5524_Read();
+                  ~ ^~~~~~~~~~~~~~~
+iot_project.c:148:23: warning: ordered comparison between pointer and integer ('int' and 'unsigned char *')
+    for (int i = 0; i < (sendCommand) - 1; i++) { // Exclude null terminator
+                    ~ ^ ~~~~~~~~~~~~~~~~~
+18 warnings generated.
+make[2]: Leaving directory 'E:/PIC Mircocontroller program/IOT_sensor_nd_gis_project.X'
+[31mmake[2]: *** [nbproject/Makefile-PRO_Comparison.mk:134: .ca/dist/PRO_Comparison/production/IOT_sensor_nd_gis_project.X.production.hex] Error 1
+make[1]: *** [nbproject/Makefile-PRO_Comparison.mk:85: .build-conf] Error 2
+make: *** [nbproject/Makefile-impl.mk:39: .build-impl] Error 2[0m
+make[2]: Entering directory 'E:/PIC Mircocontroller program/IOT_sensor_nd_gis_project.X'
+"C:\Program Files\Microchip\xc8\v2.46\bin\xc8-cc.exe"  -mcpu=16F877A -Wl,-Map=.ca/dist/PRO_Comparison/production/IOT_sensor_nd_gis_project.X.production.map  -DXPRJ_PRO_Comparison=PRO_Comparison  -Wl,--defsym=__MPLAB_BUILD=1   -mdfp="C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mno-default-config-bits -mafrlcsj -std=c99 -gdwarf-3 -mstack=compiled:auto:auto      -Wl,--memorysummary,.ca/dist/PRO_Comparison/production/memoryfile.xml -o .ca/dist/PRO_Comparison/production/IOT_sensor_nd_gis_project.X.production.elf  .ca/build/PRO_Comparison/production/iot_project.p1     
+(908) exit status = 1
+::: advisory: (2100) using the C99 standard library with the selected device may result in larger code and data usage
+iot_project.c:80:: error: (1250) could not find space (256 bytes) for variable _data_buffer
+(908) exit status = 1
+make[2]: Leaving directory 'E:/PIC Mircocontroller program/IOT_sensor_nd_gis_project.X'
+[31mBUILD FAILED (exit value 2, total time: 2s)[0m

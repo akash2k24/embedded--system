@@ -1,0 +1,53 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"27 E:\PIC Mircocontroller program\PWM_task_program.X\PWM_task_program.c
+[v _main main `(v  1 e 1 0 ]
+"35
+[v _init init `(v  1 e 1 0 ]
+"48
+[v _Pwmchange Pwmchange `(v  1 e 1 0 ]
+"737 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h
+[v _T2CON T2CON `VEuc  1 e 1 @18 ]
+"1080
+[v _CCPR2L CCPR2L `VEuc  1 e 1 @27 ]
+"1094
+[v _CCP2CON CCP2CON `VEuc  1 e 1 @29 ]
+"1437
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1816
+[v _PR2 PR2 `VEuc  1 e 1 @146 ]
+"23 E:\PIC Mircocontroller program\PWM_task_program.X\PWM_task_program.c
+[v _PWMhigh20 PWMhigh20 `uc  1 e 1 0 ]
+[v _PWMlow20 PWMlow20 `uc  1 e 1 0 ]
+"24
+[v _PWMhigh60 PWMhigh60 `uc  1 e 1 0 ]
+[v _PWMlow60 PWMlow60 `uc  1 e 1 0 ]
+"25
+[v _PWMhigh90 PWMhigh90 `uc  1 e 1 0 ]
+[v _PWMlow90 PWMlow90 `uc  1 e 1 0 ]
+"27
+[v _main main `(v  1 e 1 0 ]
+{
+"34
+} 0
+"35
+[v _init init `(v  1 e 1 0 ]
+{
+"47
+} 0
+"48
+[v _Pwmchange Pwmchange `(v  1 e 1 0 ]
+{
+"59
+} 0
