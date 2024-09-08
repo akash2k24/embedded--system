@@ -1,0 +1,57 @@
+#include <pic.h>
+
+void state();
+
+#define _XTAL_FREQ 20000000
+void timer1delay(void){     //100ms delay
+    T1CON=0x31;           //Timer-1 with Prescaler 1:8
+    TMR1H=0x0B;             //Count Hight Byte 100ms delay @20Mhz
+    TMR1L=0xDB;             //Count Low Byte
+    GIE=1;          //Enable Global Interrupt
+    PEIE=1;         //Enable the Peripheral Interrupt
+    TMR1ON =1;     //Start Timer1   
+    for(int i=1; i<=5;i++){  //running for loop 5 times to get 0.5 sec 
+    while(!TMR1IF);
+		TMR1IF = 0;		// Turn on Timer after overflow          //Clear Interrupt
+    }
+}
+
+void main(void)
+{
+	
+	TRISB1 =1;
+	TRISB0 =1;
+	PORTB=0xff;
+	TRISD = 0x00; 
+	PORTD=0x00;
+	while(1)
+	{
+	state();
+		}
+}
+void state()
+{
+	while (1)
+	{
+		if (RB0 ==1 && RB1 ==0)
+		{
+			RD1=1;
+			RD2=0;
+			timer1delay();
+			}
+		else if( RB1 ==1&& RB0 ==0)
+		{
+			RD2=1;
+			RD1=0;
+			timer1delay();
+			}
+		else
+		{
+			RD1=0;
+			RD2=0;
+			timer1delay();
+			}
+
+
+}
+}

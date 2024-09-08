@@ -1,0 +1,99 @@
+Added Component: Designator=BR?(SOP240P690X290-4N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "MBS10 RC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/mbs10rc/taiwan-semiconductor?region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "2.9mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Taiwan Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "MBS10 RC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "N/A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=N%2FA"; VariantName = "[No Variations]"
+Added Component: Designator=C?(CAPPRD500W65D1250H2700)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://industrial.panasonic.com/cdbs/www-data/pdf/RDF0000/ABA0000C1212.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "27mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "EEUTA1E102LB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C?(CAPPRD500W65D1250H2700)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://industrial.panasonic.com/cdbs/www-data/pdf/RDF0000/ABA0000C1212.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "27mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "EEUTA1E102LB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C?(CAPPRD500W65D1250H2700)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://industrial.panasonic.com/cdbs/www-data/pdf/RDF0000/ABA0000C1212.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "27mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "EEUTA1E102LB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=IC?(ABX00028)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "ABX00028"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/abx00028/arduino-corporation?region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://store.arduino.cc/arduino-nano-every"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "10mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Arduino"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "ABX00028"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "782-ABX00028"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Arduino/ABX00028?qs=PzGy0jfpSMtit6rnFl8mVg%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=IC?(TO254P470X1016X2019-3P)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "LM7812ACT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/lm7812act/on-semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://datasheet.datasheetarchive.com/originals/distributors/Datasheets_SAMA/704b005d7d2d9ced5864f40b6609c1bc.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "4.7mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "onsemi"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "LM7812ACT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "512-LM7812ACT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=512-LM7812ACT"; VariantName = "[No Variations]"
+Added Component: Designator=IC?(TO254P470X1016X2019-3P)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "LM7805ACT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/lm7805act/on-semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/2/LM7805ACT.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "4.7mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "onsemi"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "LM7805ACT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "512-LM7805ACT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/ON-Semiconductor-Fairchild/LM7805ACT?qs=VOMQJJE%252BBNlQknJDd4ZVLg%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=J?(PJ002AHSMT1)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.cui.com/product/resource/pj-002ah-smt-tr.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "11mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "CUI Devices"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "PJ-002AH-SMT-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "N/A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/CUI-Inc/PJ-002AH-SMT-1/?qs=WyjlAZoYn53v8l9vpJCO1Q%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetBR?_1 Pin=BR?-1
+Added Pin To Net: NetName=NetBR?_1 Pin=J?-1
+Added Net: Name=NetBR?_1
+Added Pin To Net: NetName=NetBR?_2 Pin=BR?-2
+Added Pin To Net: NetName=NetBR?_2 Pin=J?-4
+Added Net: Name=NetBR?_2
+Added Pin To Net: NetName=NetBR?_3 Pin=BR?-3
+Added Pin To Net: NetName=NetBR?_3 Pin=C?-1
+Added Pin To Net: NetName=NetBR?_3 Pin=C?-2
+Added Pin To Net: NetName=NetBR?_3 Pin=C?-2
+Added Pin To Net: NetName=NetBR?_3 Pin=C?-2
+Added Pin To Net: NetName=NetBR?_3 Pin=IC?-2
+Added Pin To Net: NetName=NetBR?_3 Pin=IC?-2
+Added Pin To Net: NetName=NetBR?_3 Pin=IC?-3
+Added Pin To Net: NetName=NetBR?_3 Pin=IC?-A14
+Added Pin To Net: NetName=NetBR?_3 Pin=IC?-B4
+Added Net: Name=NetBR?_3
+Added Pin To Net: NetName=NetBR?_4 Pin=BR?-4
+Added Pin To Net: NetName=NetBR?_4 Pin=C?-1
+Added Pin To Net: NetName=NetBR?_4 Pin=IC?-1
+Added Net: Name=NetBR?_4
+Added Pin To Net: NetName=NetC?_1 Pin=C?-1
+Added Pin To Net: NetName=NetC?_1 Pin=IC?-1
+Added Pin To Net: NetName=NetC?_1 Pin=IC?-3
+Added Net: Name=NetC?_1
+Added Class: Name=Sheet3
+Added Class: Name=Sheet4

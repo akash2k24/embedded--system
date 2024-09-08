@@ -1,0 +1,9 @@
+ic engine running charging of battery
+ignation key set
+freewheel drive system
+regenerative breaking
+throotle combination
+design of buck boot convertor
+controller design
+cutoff voltage 
+indicator design hybrid

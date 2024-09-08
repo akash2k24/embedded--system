@@ -1,0 +1,4 @@
+Change Component Designator: OldDesignator=J1 NewDesignator=J4
+Change Net Name : Old Net Name=NetJ1_1 New Net Name=NetJ4_1
+Added Member To Class: ClassName=Sheet1 Member=Component DS1 162H_DC_BW-3LP
+Added Member To Class: ClassName=Sheet1 Member=Component J4 691213810001

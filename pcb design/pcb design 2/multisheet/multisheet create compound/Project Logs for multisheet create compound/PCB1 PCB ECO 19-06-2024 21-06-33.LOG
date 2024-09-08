@@ -1,0 +1,44 @@
+Add Pin To Net: Unknown Pin: Pin *-1
+Add Pin To Net: Unknown Pin: Pin *-2
+Add Pin To Net: Unknown Pin: Pin *-3
+Add Pin To Net: Unknown Pin: Pin D?-66
+Add Pin To Net: Unknown Pin: Pin D?-67
+Add Pin To Net: Unknown Pin: Pin IC1-2
+Add Pin To Net: Unknown Pin: Pin IC1-5
+Add Pin To Net: Unknown Pin: Pin IC1-9
+Add Pin To Net: Unknown Pin: Pin IC1-10
+Add Pin To Net: Unknown Pin: Pin IC1-11
+Add Pin To Net: Unknown Pin: Pin IC1-12
+Add Pin To Net: Unknown Pin: Pin IC1-13
+Add Pin To Net: Unknown Pin: Pin IC1-14
+Add Pin To Net: Unknown Pin: Pin IC1-15
+Add Pin To Net: Unknown Pin: Pin IC1-16
+Add Pin To Net: Unknown Pin: Pin IC-1
+Add Pin To Net: Unknown Pin: Pin IC-5
+Add Pin To Net: Unknown Pin: Pin IC-6
+Add Pin To Net: Unknown Pin: Pin IC-9
+Add Pin To Net: Unknown Pin: Pin T?-1
+Add Pin To Net: Unknown Pin: Pin T?-1
+Add Pin To Net: Unknown Pin: Pin T?-1
+Add Pin To Net: Unknown Pin: Pin T?-1
+Add Pin To Net: Unknown Pin: Pin T?-2
+Add Pin To Net: Unknown Pin: Pin T?-2
+Add Pin To Net: Unknown Pin: Pin T?-2
+Add Pin To Net: Unknown Pin: Pin T?-2
+Add Pin To Net: Unknown Pin: Pin T?-3
+Add Pin To Net: Unknown Pin: Pin T?-70
+Add Pin To Net: Unknown Pin: Pin T?-71
+Add Pin To Net: Unknown Pin: Pin T?-72
+Add Net: Net with name "NetC?_1" already exists
+Add Class Member: Failed to add class member : Component * KDS184
+Added Member To Class: ClassName=Sheet1 Member=Component C14 330pF
+Added Member To Class: ClassName=Sheet1 Member=Component C? 220nF
+Added Member To Class: ClassName=Sheet1 Member=Component C? 220nF
+Add Class Member: Failed to add class member : Component D? KIA431AMZ
+Add Class Member: Failed to add class member : Component IC1 SIM5025
+Add Class Member: Failed to add class member : Component IC PD32A0-DrV
+Add Class Member: Failed to add class member : Component T? Z02W22VY
+Add Class Member: Failed to add class member : Component T? MDD5N40RH
+Add Class Member: Failed to add class member : Component T? Z02W22VY
+Add Class Member: Failed to add class member : Component T? Z02W22VY
+Add Class Member: Failed to add class member : Component T? KDS184

@@ -1,0 +1,13 @@
+___awdiv: CODE, 905 0 116
+_Lcd8_Display: CODE, 616 0 41
+___awmod: CODE, 803 0 102
+_Lcd8_Init: CODE, 527 0 25
+_main: CODE, 1158 0 293
+_Lcd8_Decimal3: CODE, 1021 0 137
+___lwdiv: CODE, 725 0 78
+___lwmod: CODE, 657 0 68
+_Delay: CODE, 507 0 20
+_Lcd8_Write: CODE, 581 0 35
+_Adc8_Cha: CODE, 1451 0 597
+_Lcd8_Command: CODE, 552 0 29
+Total: 1541

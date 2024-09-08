@@ -1,0 +1,1006 @@
+
+
+HI-TECH Software PIC LITE Macro Assembler V9.82 build 9453 
+                                                                                               Sun Aug 11 15:11:31 2024
+
+HI-TECH Software Omniscient Code Generator (Lite mode) build 9453
+     1  0000                     opt subtitle "HI-TECH Software Omniscient Code Generator (Lite mode) build 9453"
+     2                           
+     3                           opt pagewidth 120
+     4                           
+     5                           	opt lm
+     6                           
+     7                           	processor	16F877A
+     8                           clrc	macro
+     9                           	bcf	3,0
+    10  0000                     	endm
+    11                           clrz	macro
+    12                           	bcf	3,2
+    13  0000                     	endm
+    14                           setc	macro
+    15                           	bsf	3,0
+    16  0000                     	endm
+    17                           setz	macro
+    18                           	bsf	3,2
+    19  0000                     	endm
+    20                           skipc	macro
+    21                           	btfss	3,0
+    22  0000                     	endm
+    23                           skipz	macro
+    24                           	btfss	3,2
+    25  0000                     	endm
+    26                           skipnc	macro
+    27                           	btfsc	3,0
+    28  0000                     	endm
+    29                           skipnz	macro
+    30                           	btfsc	3,2
+    31  0000                     	endm
+    32  0000                     indf	equ	0
+    33  0000                     indf0	equ	0
+    34  0002                     pc	equ	2
+    35  0002                     pcl	equ	2
+    36  0003                     status	equ	3
+    37  0004                     fsr	equ	4
+    38  0004                     fsr0	equ	4
+    39  0001                     c	equ	1
+    40  0000                     z	equ	0
+    41  000A                     pclath	equ	10
+    42                           # 2 "E:\pic program\pic controller,PIC16F877A\LCD DISPLAY\test1.c"
+    43                           	psect config,class=CONFIG,delta=2 ;#
+    44                           # 2 "E:\pic program\pic controller,PIC16F877A\LCD DISPLAY\test1.c"
+    45  2007  FF32               	dw 0xFFFE & 0xFFFB & 0xFFF7 & 0xFFBF & 0xFF7F & 0xFFFF & 0xFFFF & 0xFFFF ;#
+    46                           	FNCALL	_main,_Lcd8_Init
+    47                           	FNCALL	_main,_Delay
+    48                           	FNCALL	_main,_Lcd8_Display
+    49                           	FNCALL	_Lcd8_Display,_Lcd8_Write
+    50                           	FNCALL	_Lcd8_Write,_Lcd8_Command
+    51                           	FNCALL	_Lcd8_Write,_Delay
+    52                           	FNCALL	_Lcd8_Init,_Lcd8_Command
+    53                           	FNCALL	_Lcd8_Command,_Delay
+    54                           	FNROOT	_main
+    55                           	global	_PORTD
+    56                           psect	text109,local,class=CODE,delta=2
+    57                           global __ptext109
+    58  0000                     __ptext109:
+    59  0008                     _PORTD	set	8
+    60                           	global	_CARRY
+    61  0018                     _CARRY	set	24
+    62                           	global	_GIE
+    63  005F                     _GIE	set	95
+    64                           	global	_Lcd_en
+    65  003D                     _Lcd_en	set	61
+    66                           	global	_Lcd_rs
+    67  003C                     _Lcd_rs	set	60
+    68                           	global	_TRISC
+    69  0087                     _TRISC	set	135
+    70                           	global	_TRISD
+    71  0088                     _TRISD	set	136
+    72                           	global	_EEADR
+    73  010D                     _EEADR	set	269
+    74                           	global	_EEDATA
+    75  010C                     _EEDATA	set	268
+    76                           	global	_EECON1
+    77  018C                     _EECON1	set	396
+    78                           	global	_EECON2
+    79  018D                     _EECON2	set	397
+    80                           	global	_RD
+    81  0C60                     _RD	set	3168
+    82                           	global	_WR
+    83  0C61                     _WR	set	3169
+    84                           	global	_WREN
+    85  0C62                     _WREN	set	3170
+    86                           psect	strings,class=STRING,delta=2
+    87                           global __pstrings
+    88  0003                     __pstrings:
+    89                           ;	global	stringdir,stringtab,__stringbase
+    90  0003                     stringtab:
+    91                           ;	String table - string pointers are 1 byte each
+    92  0003                     stringcode:stringdir:
+      + 0003                     stringdir:	
+    93  0003  3000               movlw high(stringdir)
+    94  0004  008A               movwf pclath
+    95  0005  0804               movf fsr,w
+    96  0006  0A84               incf fsr
+    97  0007  0782               	addwf pc
+    98  0008                     __stringbase:
+    99  0008  3400               	retlw	0
+   100                           psect	strings
+   101                           	
+   102  0009                     STR_1:	
+   103  0009  3420               	retlw	32	;' '
+   104  000A  3420               	retlw	32	;' '
+   105  000B  3420               	retlw	32	;' '
+   106  000C  3420               	retlw	32	;' '
+   107  000D  3457               	retlw	87	;'W'
+   108  000E  3445               	retlw	69	;'E'
+   109  000F  344C               	retlw	76	;'L'
+   110  0010  3443               	retlw	67	;'C'
+   111  0011  344F               	retlw	79	;'O'
+   112  0012  344D               	retlw	77	;'M'
+   113  0013  3445               	retlw	69	;'E'
+   114  0014  3420               	retlw	32	;' '
+   115  0015  3420               	retlw	32	;' '
+   116  0016  3420               	retlw	32	;' '
+   117  0017  3420               	retlw	32	;' '
+   118  0018  3420               	retlw	32	;' '
+   119  0019  3400               	retlw	0
+   120                           psect	strings
+   121                           	
+   122  001A                     STR_2:	
+   123  001A  344C               	retlw	76	;'L'
+   124  001B  3443               	retlw	67	;'C'
+   125  001C  3444               	retlw	68	;'D'
+   126  001D  3420               	retlw	32	;' '
+   127  001E  3444               	retlw	68	;'D'
+   128  001F  3449               	retlw	73	;'I'
+   129  0020  3453               	retlw	83	;'S'
+   130  0021  3450               	retlw	80	;'P'
+   131  0022  344C               	retlw	76	;'L'
+   132  0023  3441               	retlw	65	;'A'
+   133  0024  3459               	retlw	89	;'Y'
+   134  0025  3420               	retlw	32	;' '
+   135  0026  3454               	retlw	84	;'T'
+   136  0027  3445               	retlw	69	;'E'
+   137  0028  3453               	retlw	83	;'S'
+   138  0029  3454               	retlw	84	;'T'
+   139  002A  3400               	retlw	0
+   140                           psect	strings
+   141                           	file	"DISPLAY.as"
+   142                           	line	#
+   143                           psect cinit,class=CODE,delta=2
+   144                           global start_initialization
+   145  0722                     start_initialization:
+   146                           
+   147                           psect cinit,class=CODE,delta=2
+   148                           global end_of_initialization
+   149                           
+   150                           ;End of C runtime variable initialization code
+   151                           
+   152  0722                     end_of_initialization:
+   153  0722  0183               clrf status
+   154  0723  120A  118A  2FBC   ljmp _main	;jump to C main() function
+   155                           psect	cstackCOMMON,class=COMMON,space=1
+   156                           global __pcstackCOMMON
+   157  0070                     __pcstackCOMMON:
+   158                           	global	?_Lcd8_Command
+   159  0070                     ?_Lcd8_Command:	; 0 bytes @ 0x0
+   160                           	global	?_Delay
+   161  0070                     ?_Delay:	; 0 bytes @ 0x0
+   162                           	global	?_Lcd8_Init
+   163  0070                     ?_Lcd8_Init:	; 0 bytes @ 0x0
+   164                           	global	?_main
+   165  0070                     ?_main:	; 0 bytes @ 0x0
+   166                           	global	Delay@del
+   167  0070                     Delay@del:	; 2 bytes @ 0x0
+   168  0070                     	ds	2
+   169                           	global	??_Lcd8_Command
+   170  0072                     ??_Lcd8_Command:	; 0 bytes @ 0x2
+   171                           	global	??_Delay
+   172  0072                     ??_Delay:	; 0 bytes @ 0x2
+   173                           	global	Lcd8_Command@com
+   174  0072                     Lcd8_Command@com:	; 1 bytes @ 0x2
+   175  0072                     	ds	1
+   176                           	global	??_Lcd8_Init
+   177  0073                     ??_Lcd8_Init:	; 0 bytes @ 0x3
+   178                           	global	?_Lcd8_Write
+   179  0073                     ?_Lcd8_Write:	; 0 bytes @ 0x3
+   180                           	global	Lcd8_Write@lr
+   181  0073                     Lcd8_Write@lr:	; 1 bytes @ 0x3
+   182  0073                     	ds	1
+   183                           	global	??_Lcd8_Write
+   184  0074                     ??_Lcd8_Write:	; 0 bytes @ 0x4
+   185                           	global	Lcd8_Write@com
+   186  0074                     Lcd8_Write@com:	; 1 bytes @ 0x4
+   187  0074                     	ds	1
+   188                           	global	?_Lcd8_Display
+   189  0075                     ?_Lcd8_Display:	; 0 bytes @ 0x5
+   190                           	global	Lcd8_Display@word
+   191  0075                     Lcd8_Display@word:	; 1 bytes @ 0x5
+   192  0075                     	ds	1
+   193                           	global	Lcd8_Display@n
+   194  0076                     Lcd8_Display@n:	; 2 bytes @ 0x6
+   195  0076                     	ds	2
+   196                           	global	??_Lcd8_Display
+   197  0078                     ??_Lcd8_Display:	; 0 bytes @ 0x8
+   198  0078                     	ds	2
+   199                           	global	Lcd8_Display@com
+   200  007A                     Lcd8_Display@com:	; 1 bytes @ 0xA
+   201  007A                     	ds	1
+   202                           	global	Lcd8_Display@Lcd_i
+   203  007B                     Lcd8_Display@Lcd_i:	; 1 bytes @ 0xB
+   204  007B                     	ds	1
+   205                           	global	??_main
+   206  007C                     ??_main:	; 0 bytes @ 0xC
+   207  007C                     	ds	1
+   208 ;;Data sizes: Strings 34, constant 0, data 0, bss 0, persistent 0 stack 0
+   209 ;;Auto spaces:   Size  Autos    Used
+   210 ;; COMMON          14     13      13
+   211 ;; BANK0           80      0       0
+   212 ;; BANK1           80      0       0
+   213 ;; BANK3           96      0       0
+   214 ;; BANK2           96      0       0
+   215                           
+   216 ;;
+   217 ;; Pointer list with targets:
+   218                           
+   219 ;; Lcd8_Display@word	PTR const unsigned char  size(1) Largest target is 17
+   220 ;;		 -> STR_2(CODE[17]), STR_1(CODE[17]), 
+   221 ;;
+   222                           
+   223                           
+   224 ;;
+   225 ;; Critical Paths under _main in COMMON
+   226 ;;
+   227 ;;   _main->_Lcd8_Display
+   228 ;;   _Lcd8_Display->_Lcd8_Write
+   229 ;;   _Lcd8_Write->_Lcd8_Command
+   230 ;;   _Lcd8_Init->_Lcd8_Command
+   231 ;;   _Lcd8_Command->_Delay
+   232 ;;
+   233 ;; Critical Paths under _main in BANK0
+   234 ;;
+   235 ;;   None.
+   236 ;;
+   237 ;; Critical Paths under _main in BANK1
+   238 ;;
+   239 ;;   None.
+   240 ;;
+   241 ;; Critical Paths under _main in BANK3
+   242 ;;
+   243 ;;   None.
+   244 ;;
+   245 ;; Critical Paths under _main in BANK2
+   246 ;;
+   247 ;;   None.
+   248                           
+   249 ;;
+   250 ;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
+   251 ;;
+   252                           
+   253 ;;
+   254 ;;Call Graph Tables:
+   255 ;;
+   256 ;; ---------------------------------------------------------------------------------
+   257 ;; (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+   258 ;; ---------------------------------------------------------------------------------
+   259 ;; (0) _main                                                 1     1      0     210
+   260 ;;                                             12 COMMON     1     1      0
+   261 ;;                          _Lcd8_Init
+   262 ;;                              _Delay
+   263 ;;                       _Lcd8_Display
+   264 ;; ---------------------------------------------------------------------------------
+   265 ;; (1) _Lcd8_Display                                         7     4      3     165
+   266 ;;                                              5 COMMON     7     4      3
+   267 ;;                         _Lcd8_Write
+   268 ;; ---------------------------------------------------------------------------------
+   269 ;; (2) _Lcd8_Write                                           2     1      1      75
+   270 ;;                                              3 COMMON     2     1      1
+   271 ;;                       _Lcd8_Command
+   272 ;;                              _Delay
+   273 ;; ---------------------------------------------------------------------------------
+   274 ;; (1) _Lcd8_Init                                            0     0      0      30
+   275 ;;                       _Lcd8_Command
+   276 ;; ---------------------------------------------------------------------------------
+   277 ;; (3) _Lcd8_Command                                         1     1      0      30
+   278 ;;                                              2 COMMON     1     1      0
+   279 ;;                              _Delay
+   280 ;; ---------------------------------------------------------------------------------
+   281 ;; (3) _Delay                                                2     0      2      15
+   282 ;;                                              0 COMMON     2     0      2
+   283 ;; ---------------------------------------------------------------------------------
+   284 ;; Estimated maximum stack depth 3
+   285 ;; ---------------------------------------------------------------------------------
+   286                           
+   287 ;; Call Graph Graphs:
+   288                           
+   289 ;; _main (ROOT)
+   290 ;;   _Lcd8_Init
+   291 ;;     _Lcd8_Command
+   292 ;;       _Delay
+   293 ;;   _Delay
+   294 ;;   _Lcd8_Display
+   295 ;;     _Lcd8_Write
+   296 ;;       _Lcd8_Command
+   297 ;;         _Delay
+   298 ;;       _Delay
+   299 ;;
+   300                           
+   301 ;; Address spaces:
+   302                           
+   303 ;;Name               Size   Autos  Total    Cost      Usage
+   304 ;;BITCOMMON            E      0       0       0        0.0%
+   305 ;;EEDATA             100      0       0       0        0.0%
+   306 ;;NULL                 0      0       0       0        0.0%
+   307 ;;CODE                 0      0       0       0        0.0%
+   308 ;;COMMON               E      D       D       1       92.9%
+   309 ;;BITSFR0              0      0       0       1        0.0%
+   310 ;;SFR0                 0      0       0       1        0.0%
+   311 ;;BITSFR1              0      0       0       2        0.0%
+   312 ;;SFR1                 0      0       0       2        0.0%
+   313 ;;STACK                0      0       4       2        0.0%
+   314 ;;ABS                  0      0       0       3        0.0%
+   315 ;;BITBANK0            50      0       0       4        0.0%
+   316 ;;BITSFR3              0      0       0       4        0.0%
+   317 ;;SFR3                 0      0       0       4        0.0%
+   318 ;;BANK0               50      0       0       5        0.0%
+   319 ;;BITSFR2              0      0       0       5        0.0%
+   320 ;;SFR2                 0      0       0       5        0.0%
+   321 ;;BITBANK1            50      0       0       6        0.0%
+   322 ;;BANK1               50      0       0       7        0.0%
+   323 ;;BITBANK3            60      0       0       8        0.0%
+   324 ;;BANK3               60      0       0       9        0.0%
+   325 ;;BITBANK2            60      0       0      10        0.0%
+   326 ;;BANK2               60      0       0      11        0.0%
+   327 ;;DATA                 0      0       0      12        0.0%
+   328                           
+   329                           	global	_main
+   330                           psect	maintext,global,class=CODE,delta=2
+   331                           global __pmaintext
+   332  07BC                     __pmaintext:
+   333                           
+   334 ;; *************** function _main *****************
+   335 ;; Defined at:
+   336 ;;		line 8 in file "E:\pic program\pic controller,PIC16F877A\LCD DISPLAY\test1.c"
+   337 ;; Parameters:    Size  Location     Type
+   338 ;;		None
+   339 ;; Auto vars:     Size  Location     Type
+   340 ;;		None
+   341 ;; Return value:  Size  Location     Type
+   342 ;;		None               void
+   343 ;; Registers used:
+   344 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   345 ;; Tracked objects:
+   346 ;;		On entry : 17F/0
+   347 ;;		On exit  : 0/0
+   348 ;;		Unchanged: 0/0
+   349 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   350 ;;      Params:         0       0       0       0       0
+   351 ;;      Locals:         0       0       0       0       0
+   352 ;;      Temps:          1       0       0       0       0
+   353 ;;      Totals:         1       0       0       0       0
+   354 ;;Total ram usage:        1 bytes
+   355 ;; Hardware stack levels required when called:    4
+   356 ;; This function calls:
+   357 ;;		_Lcd8_Init
+   358 ;;		_Delay
+   359 ;;		_Lcd8_Display
+   360 ;; This function is called by:
+   361 ;;		Startup code after reset
+   362 ;; This function uses a non-reentrant model
+   363 ;;
+   364                           psect	maintext
+   365                           	file	"E:\pic program\pic controller,PIC16F877A\LCD DISPLAY\test1.c"
+   366                           	line	8
+   367                           	global	__size_of_main
+   368  0044                     	__size_of_main	equ	__end_of_main-_main
+   369                           	
+   370  07BC                     _main:	
+   371                           	opt	stack 4
+   372                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   373                           	line	9
+   374                           	
+   375  07BC                     l2882:	
+   376                           ;test1.c: 9: TRISC=0xC0;
+   377  07BC  30C0               	movlw	(0C0h)
+   378  07BD  1683               	bsf	status, 5	;RP0=1, select bank1
+   379  07BE  1303               	bcf	status, 6	;RP1=0, select bank1
+   380  07BF  0087               	movwf	(135)^080h	;volatile
+   381                           	line	10
+   382                           	
+   383  07C0                     l2884:	
+   384                           ;test1.c: 10: TRISD=0x00;
+   385  07C0  0188               	clrf	(136)^080h	;volatile
+   386                           	line	12
+   387                           	
+   388  07C1                     l2886:	
+   389                           ;test1.c: 12: Lcd8_Init();
+   390  07C1  120A  118A  273A   	fcall	_Lcd8_Init
+              120A  118A         
+   391                           	line	13
+   392                           	
+   393  07C6                     l2888:	
+   394                           ;test1.c: 13: Delay(6500);
+   395  07C6  3064               	movlw	low(01964h)
+   396  07C7  00F0               	movwf	(?_Delay)
+   397  07C8  3019               	movlw	high(01964h)
+   398  07C9  00F1               	movwf	((?_Delay))+1
+   399  07CA  120A  118A  2726   	fcall	_Delay
+              120A  118A         
+   400                           	line	14
+   401                           	
+   402  07CF                     l2890:	
+   403                           ;test1.c: 14: Lcd8_Display(0x80,"    WELCOME     ",16);
+   404  07CF  3001               	movlw	((STR_1-__stringbase))&0ffh
+   405  07D0  00FC               	movwf	(??_main+0)+0
+   406  07D1  087C               	movf	(??_main+0)+0,w
+   407  07D2  00F5               	movwf	(?_Lcd8_Display)
+   408  07D3  3010               	movlw	low(010h)
+   409  07D4  00F6               	movwf	0+(?_Lcd8_Display)+01h
+   410  07D5  3000               	movlw	high(010h)
+   411  07D6  00F7               	movwf	(0+(?_Lcd8_Display)+01h)+1
+   412  07D7  3080               	movlw	(080h)
+   413  07D8  120A  118A  2793   	fcall	_Lcd8_Display
+              120A  118A         
+   414                           	line	15
+   415                           	
+   416  07DD                     l2892:	
+   417                           ;test1.c: 15: Lcd8_Display(0xC0,"LCD DISPLAY TEST",16);
+   418  07DD  3012               	movlw	((STR_2-__stringbase))&0ffh
+   419  07DE  00FC               	movwf	(??_main+0)+0
+   420  07DF  087C               	movf	(??_main+0)+0,w
+   421  07E0  00F5               	movwf	(?_Lcd8_Display)
+   422  07E1  3010               	movlw	low(010h)
+   423  07E2  00F6               	movwf	0+(?_Lcd8_Display)+01h
+   424  07E3  3000               	movlw	high(010h)
+   425  07E4  00F7               	movwf	(0+(?_Lcd8_Display)+01h)+1
+   426  07E5  30C0               	movlw	(0C0h)
+   427  07E6  120A  118A  2793   	fcall	_Lcd8_Display
+              120A  118A         
+   428                           	line	16
+   429                           	
+   430  07EB                     l2894:	
+   431                           ;test1.c: 16: Delay(6500);Delay(6500);
+   432  07EB  3064               	movlw	low(01964h)
+   433  07EC  00F0               	movwf	(?_Delay)
+   434  07ED  3019               	movlw	high(01964h)
+   435  07EE  00F1               	movwf	((?_Delay))+1
+   436  07EF  120A  118A  2726   	fcall	_Delay
+              120A  118A         
+   437                           	
+   438  07F4                     l2896:	
+   439  07F4  3064               	movlw	low(01964h)
+   440  07F5  00F0               	movwf	(?_Delay)
+   441  07F6  3019               	movlw	high(01964h)
+   442  07F7  00F1               	movwf	((?_Delay))+1
+   443  07F8  120A  118A  2726   	fcall	_Delay
+              120A  118A         
+   444                           	line	17
+   445                           	
+   446  07FD                     l723:	
+   447                           	global	start
+   448  07FD  120A  118A  2800   	ljmp	start
+   449                           	opt stack 0
+   450                           GLOBAL	__end_of_main
+   451  0800                     	__end_of_main:
+   452 ;; =============== function _main ends ============
+   453                           
+   454                           	signat	_main,88
+   455                           	global	_Lcd8_Display
+   456                           psect	text110,local,class=CODE,delta=2
+   457                           global __ptext110
+   458  0793                     __ptext110:
+   459                           
+   460 ;; *************** function _Lcd8_Display *****************
+   461 ;; Defined at:
+   462 ;;		line 51 in file "E:\pic program\pic controller,PIC16F877A\LCD DISPLAY\pic_lcd8.h"
+   463 ;; Parameters:    Size  Location     Type
+   464 ;;  com             1    wreg     unsigned char 
+   465 ;;  word            1    5[COMMON] PTR const unsigned char 
+   466 ;;		 -> STR_2(17), STR_1(17), 
+   467 ;;  n               2    6[COMMON] unsigned int 
+   468 ;; Auto vars:     Size  Location     Type
+   469 ;;  com             1   10[COMMON] unsigned char 
+   470 ;;  Lcd_i           1   11[COMMON] unsigned char 
+   471 ;; Return value:  Size  Location     Type
+   472 ;;		None               void
+   473 ;; Registers used:
+   474 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   475 ;; Tracked objects:
+   476 ;;		On entry : 0/0
+   477 ;;		On exit  : 0/0
+   478 ;;		Unchanged: 0/0
+   479 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   480 ;;      Params:         3       0       0       0       0
+   481 ;;      Locals:         2       0       0       0       0
+   482 ;;      Temps:          2       0       0       0       0
+   483 ;;      Totals:         7       0       0       0       0
+   484 ;;Total ram usage:        7 bytes
+   485 ;; Hardware stack levels used:    1
+   486 ;; Hardware stack levels required when called:    3
+   487 ;; This function calls:
+   488 ;;		_Lcd8_Write
+   489 ;; This function is called by:
+   490 ;;		_main
+   491 ;; This function uses a non-reentrant model
+   492 ;;
+   493                           psect	text110
+   494                           	file	"E:\pic program\pic controller,PIC16F877A\LCD DISPLAY\pic_lcd8.h"
+   495                           	line	51
+   496                           	global	__size_of_Lcd8_Display
+   497  0029                     	__size_of_Lcd8_Display	equ	__end_of_Lcd8_Display-_Lcd8_Display
+   498                           	
+   499  0793                     _Lcd8_Display:	
+   500                           	opt	stack 4
+   501                           ; Regs used in _Lcd8_Display: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   502                           ;Lcd8_Display@com stored from wreg
+   503                           	line	54
+   504  0793  00FA               	movwf	(Lcd8_Display@com)
+   505                           	
+   506  0794                     l2874:	
+   507                           ;pic_lcd8.h: 52: unsigned char Lcd_i;
+   508                           ;pic_lcd8.h: 54: for(Lcd_i=0;Lcd_i<n;Lcd_i++)
+   509  0794  01FB               	clrf	(Lcd8_Display@Lcd_i)
+   510  0795  2FAD               	goto	l2880
+   511                           	line	55
+   512                           	
+   513  0796                     l703:	
+   514                           	line	56
+   515                           	
+   516  0796                     l2876:	
+   517                           ;pic_lcd8.h: 55: {
+   518                           ;pic_lcd8.h: 56: Lcd8_Write(com+Lcd_i,word[Lcd_i]);
+   519  0796  087B               	movf	(Lcd8_Display@Lcd_i),w
+   520  0797  0775               	addwf	(Lcd8_Display@word),w
+   521  0798  0084               	movwf	fsr0
+   522  0799  120A  118A  2003   	fcall	stringdir
+              120A  118A         
+   523  079E  00F8               	movwf	(??_Lcd8_Display+0)+0
+   524  079F  0878               	movf	(??_Lcd8_Display+0)+0,w
+   525  07A0  00F3               	movwf	(?_Lcd8_Write)
+   526  07A1  087B               	movf	(Lcd8_Display@Lcd_i),w
+   527  07A2  077A               	addwf	(Lcd8_Display@com),w
+   528  07A3  120A  118A  2770   	fcall	_Lcd8_Write
+              120A  118A         
+   529                           	line	54
+   530                           	
+   531  07A8                     l2878:	
+   532  07A8  3001               	movlw	(01h)
+   533  07A9  00F8               	movwf	(??_Lcd8_Display+0)+0
+   534  07AA  0878               	movf	(??_Lcd8_Display+0)+0,w
+   535  07AB  07FB               	addwf	(Lcd8_Display@Lcd_i),f
+   536  07AC  2FAD               	goto	l2880
+   537                           	
+   538  07AD                     l702:	
+   539                           	
+   540  07AD                     l2880:	
+   541  07AD  087B               	movf	(Lcd8_Display@Lcd_i),w
+   542  07AE  00F8               	movwf	(??_Lcd8_Display+0)+0
+   543  07AF  01F9               	clrf	(??_Lcd8_Display+0)+0+1
+   544  07B0  0877               	movf	(Lcd8_Display@n+1),w
+   545  07B1  0279               	subwf	1+(??_Lcd8_Display+0)+0,w
+   546  07B2  1D03               	skipz
+   547  07B3  2FB6               	goto	u2235
+   548  07B4  0876               	movf	(Lcd8_Display@n),w
+   549  07B5  0278               	subwf	0+(??_Lcd8_Display+0)+0,w
+   550  07B6                     u2235:
+   551  07B6  1C03               	skipc
+   552  07B7  2FB9               	goto	u2231
+   553  07B8  2FBA               	goto	u2230
+   554  07B9                     u2231:
+   555  07B9  2F96               	goto	l2876
+   556  07BA                     u2230:
+   557  07BA  2FBB               	goto	l705
+   558                           	
+   559  07BB                     l704:	
+   560                           	line	58
+   561                           	
+   562  07BB                     l705:	
+   563  07BB  0008               	return
+   564                           	opt stack 0
+   565                           GLOBAL	__end_of_Lcd8_Display
+   566  07BC                     	__end_of_Lcd8_Display:
+   567 ;; =============== function _Lcd8_Display ends ============
+   568                           
+   569                           	signat	_Lcd8_Display,12408
+   570                           	global	_Lcd8_Write
+   571                           psect	text111,local,class=CODE,delta=2
+   572                           global __ptext111
+   573  0770                     __ptext111:
+   574                           
+   575 ;; *************** function _Lcd8_Write *****************
+   576 ;; Defined at:
+   577 ;;		line 39 in file "E:\pic program\pic controller,PIC16F877A\LCD DISPLAY\pic_lcd8.h"
+   578 ;; Parameters:    Size  Location     Type
+   579 ;;  com             1    wreg     unsigned char 
+   580 ;;  lr              1    3[COMMON] unsigned char 
+   581 ;; Auto vars:     Size  Location     Type
+   582 ;;  com             1    4[COMMON] unsigned char 
+   583 ;; Return value:  Size  Location     Type
+   584 ;;		None               void
+   585 ;; Registers used:
+   586 ;;		wreg, status,2, status,0, pclath, cstack
+   587 ;; Tracked objects:
+   588 ;;		On entry : 0/0
+   589 ;;		On exit  : 0/0
+   590 ;;		Unchanged: 0/0
+   591 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   592 ;;      Params:         1       0       0       0       0
+   593 ;;      Locals:         1       0       0       0       0
+   594 ;;      Temps:          0       0       0       0       0
+   595 ;;      Totals:         2       0       0       0       0
+   596 ;;Total ram usage:        2 bytes
+   597 ;; Hardware stack levels used:    1
+   598 ;; Hardware stack levels required when called:    2
+   599 ;; This function calls:
+   600 ;;		_Lcd8_Command
+   601 ;;		_Delay
+   602 ;; This function is called by:
+   603 ;;		_Lcd8_Display
+   604 ;;		_Lcd8_Decimal2
+   605 ;;		_Lcd8_Decimal3
+   606 ;;		_Lcd8_Decimal4
+   607 ;; This function uses a non-reentrant model
+   608 ;;
+   609                           psect	text111
+   610                           	file	"E:\pic program\pic controller,PIC16F877A\LCD DISPLAY\pic_lcd8.h"
+   611                           	line	39
+   612                           	global	__size_of_Lcd8_Write
+   613  0023                     	__size_of_Lcd8_Write	equ	__end_of_Lcd8_Write-_Lcd8_Write
+   614                           	
+   615  0770                     _Lcd8_Write:	
+   616                           	opt	stack 4
+   617                           ; Regs used in _Lcd8_Write: [wreg+status,2+status,0+pclath+cstack]
+   618                           ;Lcd8_Write@com stored from wreg
+   619  0770  00F4               	movwf	(Lcd8_Write@com)
+   620                           	line	40
+   621                           	
+   622  0771                     l2860:	
+   623                           ;pic_lcd8.h: 40: Lcd8_Command(com);
+   624  0771  0874               	movf	(Lcd8_Write@com),w
+   625  0772  120A  118A  2753   	fcall	_Lcd8_Command
+              120A  118A         
+   626                           	line	42
+   627                           	
+   628  0777                     l2862:	
+   629                           ;pic_lcd8.h: 42: PORTD=lr;
+   630  0777  0873               	movf	(Lcd8_Write@lr),w
+   631  0778  1283               	bcf	status, 5	;RP0=0, select bank0
+   632  0779  1303               	bcf	status, 6	;RP1=0, select bank0
+   633  077A  0088               	movwf	(8)	;volatile
+   634                           	line	43
+   635                           	
+   636  077B                     l2864:	
+   637                           ;pic_lcd8.h: 43: Lcd_en=1;
+   638  077B  1687               	bsf	(61/8),(61)&7
+   639                           	line	44
+   640                           	
+   641  077C                     l2866:	
+   642                           ;pic_lcd8.h: 44: Lcd_rs=1;
+   643  077C  1607               	bsf	(60/8),(60)&7
+   644                           	line	45
+   645                           	
+   646  077D                     l2868:	
+   647                           ;pic_lcd8.h: 45: Delay(125);
+   648  077D  307D               	movlw	low(07Dh)
+   649  077E  00F0               	movwf	(?_Delay)
+   650  077F  3000               	movlw	high(07Dh)
+   651  0780  00F1               	movwf	((?_Delay))+1
+   652  0781  120A  118A  2726   	fcall	_Delay
+              120A  118A         
+   653                           	line	46
+   654                           	
+   655  0786                     l2870:	
+   656                           ;pic_lcd8.h: 46: Lcd_en=0;
+   657  0786  1283               	bcf	status, 5	;RP0=0, select bank0
+   658  0787  1303               	bcf	status, 6	;RP1=0, select bank0
+   659  0788  1287               	bcf	(61/8),(61)&7
+   660                           	line	47
+   661                           	
+   662  0789                     l2872:	
+   663                           ;pic_lcd8.h: 47: Delay(125);
+   664  0789  307D               	movlw	low(07Dh)
+   665  078A  00F0               	movwf	(?_Delay)
+   666  078B  3000               	movlw	high(07Dh)
+   667  078C  00F1               	movwf	((?_Delay))+1
+   668  078D  120A  118A  2726   	fcall	_Delay
+              120A  118A         
+   669                           	line	48
+   670                           	
+   671  0792                     l699:	
+   672  0792  0008               	return
+   673                           	opt stack 0
+   674                           GLOBAL	__end_of_Lcd8_Write
+   675  0793                     	__end_of_Lcd8_Write:
+   676 ;; =============== function _Lcd8_Write ends ============
+   677                           
+   678                           	signat	_Lcd8_Write,8312
+   679                           	global	_Lcd8_Init
+   680                           psect	text112,local,class=CODE,delta=2
+   681                           global __ptext112
+   682  073A                     __ptext112:
+   683                           
+   684 ;; *************** function _Lcd8_Init *****************
+   685 ;; Defined at:
+   686 ;;		line 21 in file "E:\pic program\pic controller,PIC16F877A\LCD DISPLAY\pic_lcd8.h"
+   687 ;; Parameters:    Size  Location     Type
+   688 ;;		None
+   689 ;; Auto vars:     Size  Location     Type
+   690 ;;		None
+   691 ;; Return value:  Size  Location     Type
+   692 ;;		None               void
+   693 ;; Registers used:
+   694 ;;		wreg, status,2, status,0, pclath, cstack
+   695 ;; Tracked objects:
+   696 ;;		On entry : 0/0
+   697 ;;		On exit  : 0/0
+   698 ;;		Unchanged: 0/0
+   699 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   700 ;;      Params:         0       0       0       0       0
+   701 ;;      Locals:         0       0       0       0       0
+   702 ;;      Temps:          0       0       0       0       0
+   703 ;;      Totals:         0       0       0       0       0
+   704 ;;Total ram usage:        0 bytes
+   705 ;; Hardware stack levels used:    1
+   706 ;; Hardware stack levels required when called:    2
+   707 ;; This function calls:
+   708 ;;		_Lcd8_Command
+   709 ;; This function is called by:
+   710 ;;		_main
+   711 ;; This function uses a non-reentrant model
+   712 ;;
+   713                           psect	text112
+   714                           	file	"E:\pic program\pic controller,PIC16F877A\LCD DISPLAY\pic_lcd8.h"
+   715                           	line	21
+   716                           	global	__size_of_Lcd8_Init
+   717  0019                     	__size_of_Lcd8_Init	equ	__end_of_Lcd8_Init-_Lcd8_Init
+   718                           	
+   719  073A                     _Lcd8_Init:	
+   720                           	opt	stack 5
+   721                           ; Regs used in _Lcd8_Init: [wreg+status,2+status,0+pclath+cstack]
+   722                           	line	22
+   723                           	
+   724  073A                     l2858:	
+   725                           ;pic_lcd8.h: 22: Lcd8_Command(0x38);
+   726  073A  3038               	movlw	(038h)
+   727  073B  120A  118A  2753   	fcall	_Lcd8_Command
+              120A  118A         
+   728                           	line	23
+   729                           ;pic_lcd8.h: 23: Lcd8_Command(0x06);
+   730  0740  3006               	movlw	(06h)
+   731  0741  120A  118A  2753   	fcall	_Lcd8_Command
+              120A  118A         
+   732                           	line	24
+   733                           ;pic_lcd8.h: 24: Lcd8_Command(0x0c);
+   734  0746  300C               	movlw	(0Ch)
+   735  0747  120A  118A  2753   	fcall	_Lcd8_Command
+              120A  118A         
+   736                           	line	25
+   737                           ;pic_lcd8.h: 25: Lcd8_Command(0x01);
+   738  074C  3001               	movlw	(01h)
+   739  074D  120A  118A  2753   	fcall	_Lcd8_Command
+              120A  118A         
+   740                           	line	26
+   741                           	
+   742  0752                     l693:	
+   743  0752  0008               	return
+   744                           	opt stack 0
+   745                           GLOBAL	__end_of_Lcd8_Init
+   746  0753                     	__end_of_Lcd8_Init:
+   747 ;; =============== function _Lcd8_Init ends ============
+   748                           
+   749                           	signat	_Lcd8_Init,88
+   750                           	global	_Lcd8_Command
+   751                           psect	text113,local,class=CODE,delta=2
+   752                           global __ptext113
+   753  0753                     __ptext113:
+   754                           
+   755 ;; *************** function _Lcd8_Command *****************
+   756 ;; Defined at:
+   757 ;;		line 29 in file "E:\pic program\pic controller,PIC16F877A\LCD DISPLAY\pic_lcd8.h"
+   758 ;; Parameters:    Size  Location     Type
+   759 ;;  com             1    wreg     unsigned char 
+   760 ;; Auto vars:     Size  Location     Type
+   761 ;;  com             1    2[COMMON] unsigned char 
+   762 ;; Return value:  Size  Location     Type
+   763 ;;		None               void
+   764 ;; Registers used:
+   765 ;;		wreg, status,2, status,0, pclath, cstack
+   766 ;; Tracked objects:
+   767 ;;		On entry : 0/0
+   768 ;;		On exit  : 0/0
+   769 ;;		Unchanged: 0/0
+   770 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   771 ;;      Params:         0       0       0       0       0
+   772 ;;      Locals:         1       0       0       0       0
+   773 ;;      Temps:          0       0       0       0       0
+   774 ;;      Totals:         1       0       0       0       0
+   775 ;;Total ram usage:        1 bytes
+   776 ;; Hardware stack levels used:    1
+   777 ;; Hardware stack levels required when called:    1
+   778 ;; This function calls:
+   779 ;;		_Delay
+   780 ;; This function is called by:
+   781 ;;		_Lcd8_Init
+   782 ;;		_Lcd8_Write
+   783 ;; This function uses a non-reentrant model
+   784 ;;
+   785                           psect	text113
+   786                           	file	"E:\pic program\pic controller,PIC16F877A\LCD DISPLAY\pic_lcd8.h"
+   787                           	line	29
+   788                           	global	__size_of_Lcd8_Command
+   789  001D                     	__size_of_Lcd8_Command	equ	__end_of_Lcd8_Command-_Lcd8_Command
+   790                           	
+   791  0753                     _Lcd8_Command:	
+   792                           	opt	stack 4
+   793                           ; Regs used in _Lcd8_Command: [wreg+status,2+status,0+pclath+cstack]
+   794                           ;Lcd8_Command@com stored from wreg
+   795  0753  00F2               	movwf	(Lcd8_Command@com)
+   796                           	line	30
+   797                           	
+   798  0754                     l2846:	
+   799                           ;pic_lcd8.h: 30: PORTD=com;
+   800  0754  0872               	movf	(Lcd8_Command@com),w
+   801  0755  1283               	bcf	status, 5	;RP0=0, select bank0
+   802  0756  1303               	bcf	status, 6	;RP1=0, select bank0
+   803  0757  0088               	movwf	(8)	;volatile
+   804                           	line	31
+   805                           	
+   806  0758                     l2848:	
+   807                           ;pic_lcd8.h: 31: Lcd_en=1;
+   808  0758  1687               	bsf	(61/8),(61)&7
+   809                           	line	32
+   810                           	
+   811  0759                     l2850:	
+   812                           ;pic_lcd8.h: 32: Lcd_rs=0;
+   813  0759  1207               	bcf	(60/8),(60)&7
+   814                           	line	33
+   815                           	
+   816  075A                     l2852:	
+   817                           ;pic_lcd8.h: 33: Delay(125);
+   818  075A  307D               	movlw	low(07Dh)
+   819  075B  00F0               	movwf	(?_Delay)
+   820  075C  3000               	movlw	high(07Dh)
+   821  075D  00F1               	movwf	((?_Delay))+1
+   822  075E  120A  118A  2726   	fcall	_Delay
+              120A  118A         
+   823                           	line	34
+   824                           	
+   825  0763                     l2854:	
+   826                           ;pic_lcd8.h: 34: Lcd_en=0;
+   827  0763  1283               	bcf	status, 5	;RP0=0, select bank0
+   828  0764  1303               	bcf	status, 6	;RP1=0, select bank0
+   829  0765  1287               	bcf	(61/8),(61)&7
+   830                           	line	35
+   831                           	
+   832  0766                     l2856:	
+   833                           ;pic_lcd8.h: 35: Delay(125);
+   834  0766  307D               	movlw	low(07Dh)
+   835  0767  00F0               	movwf	(?_Delay)
+   836  0768  3000               	movlw	high(07Dh)
+   837  0769  00F1               	movwf	((?_Delay))+1
+   838  076A  120A  118A  2726   	fcall	_Delay
+              120A  118A         
+   839                           	line	36
+   840                           	
+   841  076F                     l696:	
+   842  076F  0008               	return
+   843                           	opt stack 0
+   844                           GLOBAL	__end_of_Lcd8_Command
+   845  0770                     	__end_of_Lcd8_Command:
+   846 ;; =============== function _Lcd8_Command ends ============
+   847                           
+   848                           	signat	_Lcd8_Command,4216
+   849                           	global	_Delay
+   850                           psect	text114,local,class=CODE,delta=2
+   851                           global __ptext114
+   852  0726                     __ptext114:
+   853                           
+   854 ;; *************** function _Delay *****************
+   855 ;; Defined at:
+   856 ;;		line 106 in file "E:\pic program\pic controller,PIC16F877A\LCD DISPLAY\pic_lcd8.h"
+   857 ;; Parameters:    Size  Location     Type
+   858 ;;  del             2    0[COMMON] unsigned int 
+   859 ;; Auto vars:     Size  Location     Type
+   860 ;;		None
+   861 ;; Return value:  Size  Location     Type
+   862 ;;		None               void
+   863 ;; Registers used:
+   864 ;;		wreg
+   865 ;; Tracked objects:
+   866 ;;		On entry : 0/0
+   867 ;;		On exit  : 0/0
+   868 ;;		Unchanged: 0/0
+   869 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   870 ;;      Params:         2       0       0       0       0
+   871 ;;      Locals:         0       0       0       0       0
+   872 ;;      Temps:          0       0       0       0       0
+   873 ;;      Totals:         2       0       0       0       0
+   874 ;;Total ram usage:        2 bytes
+   875 ;; Hardware stack levels used:    1
+   876 ;; This function calls:
+   877 ;;		Nothing
+   878 ;; This function is called by:
+   879 ;;		_Lcd8_Command
+   880 ;;		_Lcd8_Write
+   881 ;;		_main
+   882 ;; This function uses a non-reentrant model
+   883 ;;
+   884                           psect	text114
+   885                           	file	"E:\pic program\pic controller,PIC16F877A\LCD DISPLAY\pic_lcd8.h"
+   886                           	line	106
+   887                           	global	__size_of_Delay
+   888  0014                     	__size_of_Delay	equ	__end_of_Delay-_Delay
+   889                           	
+   890  0726                     _Delay:	
+   891                           	opt	stack 5
+   892                           ; Regs used in _Delay: [wreg]
+   893                           	line	107
+   894                           	
+   895  0726                     l1966:	
+   896                           ;pic_lcd8.h: 107: while(del--);
+   897  0726  2F28               	goto	l1968
+   898                           	
+   899  0727                     l718:	
+   900  0727  2F28               	goto	l1968
+   901                           	
+   902  0728                     l717:	
+   903                           	
+   904  0728                     l1968:	
+   905  0728  3001               	movlw	low(01h)
+   906  0729  02F0               	subwf	(Delay@del),f
+   907  072A  3000               	movlw	high(01h)
+   908  072B  1C03               	skipc
+   909  072C  03F1               	decf	(Delay@del+1),f
+   910  072D  02F1               	subwf	(Delay@del+1),f
+   911  072E  30FF               	movlw	high(0FFFFh)
+   912  072F  0671               	xorwf	((Delay@del+1)),w
+   913  0730  1D03               	skipz
+   914  0731  2F34               	goto	u15
+   915  0732  30FF               	movlw	low(0FFFFh)
+   916  0733  0670               	xorwf	((Delay@del)),w
+   917  0734                     u15:
+   918                           
+   919  0734  1D03               	skipz
+   920  0735  2F37               	goto	u11
+   921  0736  2F38               	goto	u10
+   922  0737                     u11:
+   923  0737  2F28               	goto	l1968
+   924  0738                     u10:
+   925  0738  2F39               	goto	l720
+   926                           	
+   927  0739                     l719:	
+   928                           	line	108
+   929                           	
+   930  0739                     l720:	
+   931  0739  0008               	return
+   932                           	opt stack 0
+   933                           GLOBAL	__end_of_Delay
+   934  073A                     	__end_of_Delay:
+   935 ;; =============== function _Delay ends ============
+   936                           
+   937                           	signat	_Delay,4216
+   938                           psect	text115,local,class=CODE,delta=2
+   939                           global __ptext115
+   940  0000                     __ptext115:
+   941                           	global	btemp
+   942  007E                     	btemp set 07Eh
+   943                           
+   944                           	DABS	1,126,2	;btemp
+   945                           	global	wtemp0
+   946  007E                     	wtemp0 set btemp
+
+
+HI-TECH Software PICC Macro Assembler V9.82 build 9453 
+Symbol Table                                                                                   Sun Aug 11 15:11:31 2024
+
+                    pc 0002                     _RD 0C60                     u10 0738                     u11 0737  
+                   u15 0734                     _WR 0C61                     fsr 0004                    l702 07AD  
+                  l703 0796                    l720 0739                    l704 07BB                    l705 07BB  
+                  l723 07FD                    l717 0728                    l718 0727                    l719 0739  
+                  l693 0752                    l696 076F                    l699 0792                    _GIE 005F  
+                  fsr0 0004       Lcd8_Display@word 0075                   l2850 0759                   l2852 075A  
+                 l2860 0771                   l1966 0726                   l2854 0763                   l2846 0754  
+                 l2870 0786                   l2862 0777                   l1968 0728                   l2856 0766  
+                 l2848 0758                   l2872 0789                   l2864 077B                   l2880 07AD  
+                 l2858 073A                   l2866 077C                   l2874 0794                   l2890 07CF  
+                 l2882 07BC                   l2868 077D                   l2876 0796                   l2892 07DD  
+                 l2884 07C0                   l2878 07A8                   l2894 07EB                   l2886 07C1  
+                 l2896 07F4                   l2888 07C6             _Lcd8_Write 0770                   STR_1 0009  
+                 STR_2 001A                   u2230 07BA                   u2231 07B9                   u2235 07B6  
+                 _WREN 0C62      Lcd8_Display@Lcd_i 007B                   _main 07BC                   btemp 007E  
+                 start 0000                  ?_main 0070                  _EEADR 010D                  _CARRY 0018  
+                _PORTD 0008                  _TRISC 0087                  _TRISD 0088                  _Delay 0726  
+__size_of_Lcd8_Command 001D  __size_of_Lcd8_Display 0029                  pclath 000A                  status 0003  
+                wtemp0 007E           __end_of_main 0800     __size_of_Lcd8_Init 0019           _Lcd8_Command 0753  
+         _Lcd8_Display 0793                 ??_main 007C                 ?_Delay 0070                 _EEDATA 010C  
+               _EECON1 018C                 _EECON2 018D            ?_Lcd8_Write 0073                 _Lcd_en 003D  
+               _Lcd_rs 003C      __end_of_Lcd8_Init 0753          __end_of_Delay 073A         __pcstackCOMMON 0070  
+  __size_of_Lcd8_Write 0023                ??_Delay 0072             __pmaintext 07BC           ??_Lcd8_Write 0074  
+ end_of_initialization 0722           Lcd8_Write@lr 0073     __end_of_Lcd8_Write 0793        Lcd8_Command@com 0072  
+      Lcd8_Display@com 007A              _Lcd8_Init 073A    start_initialization 0722             ?_Lcd8_Init 0070  
+            __ptext110 0793              __ptext111 0770              __ptext112 073A              __ptext113 0753  
+            __ptext114 0726              __ptext115 0000              __ptext109 0000          ?_Lcd8_Command 0070  
+        ?_Lcd8_Display 0075              __pstrings 0003         __size_of_Delay 0014            ??_Lcd8_Init 0073  
+             Delay@del 0070         ??_Lcd8_Command 0072         ??_Lcd8_Display 0078            __stringbase 0008  
+        __size_of_main 0044          Lcd8_Display@n 0076   __end_of_Lcd8_Command 0770   __end_of_Lcd8_Display 07BC  
+            stringcode 0003          Lcd8_Write@com 0074               stringdir 0003               stringtab 0003  

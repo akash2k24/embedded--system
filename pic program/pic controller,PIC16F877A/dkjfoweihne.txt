@@ -1,0 +1,29 @@
+#include <pic.h>
+
+
+void delay(long int);
+
+unsigned char value1,value2,var;
+unsigned char digit[]={0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90}; //0,1,2.....9 (COMMON ANODE)
+
+void main()
+{
+TRISB = 0x00;
+TRISC = 0xfc;
+while(1)
+{
+value1 = var/10; value2 = var%10;
+PORTC =0x01; //En 10nth digit
+PORTB = digit[value1];delay(7000);
+PORTC =0x03;
+ //En digit
+PORTB = digit[value2];delay(500);
+delay(100);
+if(var>99){var=0;} else var++;
+}
+}
+
+void delay(long int k)
+{
+while(k--);
+}

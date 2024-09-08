@@ -1,0 +1,39 @@
+Added Component: Designator=R1(RESAD5708W107L2540D792)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "RS0051R000FE12"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/rs0051r000fe12/vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/1/RS0051R000FE12.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "RS0051R000FE12"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "71-RS0051R000FE12"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=71-RS0051R000FE12"; VariantName = "[No Variations]"
+Added Component: Designator=R2(RESAD5708W107L2540D792)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "RS0051R000FE12"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/rs0051r000fe12/vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/1/RS0051R000FE12.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "RS0051R000FE12"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "71-RS0051R000FE12"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=71-RS0051R000FE12"; VariantName = "[No Variations]"
+Added Component: Designator=R3(RESAD5708W107L2540D792)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "RS0051R000FE12"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/rs0051r000fe12/vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/1/RS0051R000FE12.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "RS0051R000FE12"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "71-RS0051R000FE12"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=71-RS0051R000FE12"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetDS1_15 Pin=DS1-2
+Added Pin To Net: NetName=NetDS1_15 Pin=IC3-3
+Added Pin To Net: NetName=NetDS1_15 Pin=J2-1
+Added Pin To Net: NetName=NetDS1_15 Pin=R1-1
+Added Pin To Net: NetName=NetDS1_15 Pin=R1-2
+Added Pin To Net: NetName=NetDS1_15 Pin=R2-1
+Added Pin To Net: NetName=NetIC3_2 Pin=R2-2
+Added Pin To Net: NetName=NetIC3_2 Pin=R3-1
+Added Pin To Net: NetName=NetIC3_4 Pin=R3-2
+Change Net Name : Old Net Name=NetDS1_15 New Net Name=NetDS1_2
+Added Member To Class: ClassName=O2 level Member=Component DS1 162H_DC_BW-3LP
+Added Member To Class: ClassName=O2 level Member=Component IC1 LM7812ACT
+Added Member To Class: ClassName=O2 level Member=Component R1 1M
+Added Member To Class: ClassName=O2 level Member=Component R2 1K
+Added Member To Class: ClassName=O2 level Member=Component R3 1K

@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=p1 Pin=C2-1
+Removed Pin From Net: NetName=p1 Pin=IC1-3
+Removed Pin From Net: NetName=p1 Pin=IC?-A12
+Removed Member From Class: ClassName=multiSheet2 Member=IC1
+Change Net Name : Old Net Name=p1 New Net Name=p2
+Added Pin To Net: NetName=p1 Pin=C2-1
+Added Pin To Net: NetName=p1 Pin=IC1-3
+Added Pin To Net: NetName=p1 Pin=IC?-A12
+Added Net: Name=p1
+Added Member To Class: ClassName=multiSheet2 Member=Component IC? ABX00028

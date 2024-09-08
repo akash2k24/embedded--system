@@ -1,0 +1,40 @@
+#include<reg51.h>
+#define LEDs P0
+sbit  Swt =P3^0;
+sbit  OUT =P3^1;
+unsigned char count=0;
+
+void ext_int_0 () interrupt 0 
+{ 
+    count++;
+}
+ 
+void ext_int_1 () interrupt 2
+{ 
+   count--;
+}
+
+void main()
+{
+   Swt=0;
+	 Swt=1;
+	 OUT=0;
+	 P3 |= 0x0c; // Configure the INT0 & INT1 pins as Inputs
+   EX0 = 1;    // Enable INT0
+   EX1 = 1;    // Enable INT1
+   EA  = 1;    // Enable Global Interrupt bit
+   
+   while(1)
+   {
+     if(!Swt  == 1)
+
+		{
+			 OUT=1;
+		}
+		else
+	 {
+		   OUT=0;
+	 }
+		 LEDs =count;
+	  }
+}

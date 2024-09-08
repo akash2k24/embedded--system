@@ -1,0 +1,20 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=lpc1343 arm board\lpc1343 arm\lpc2148 arm.PrjPcb
+[Project2]
+ProjectPath=C:\Users\akash\OneDrive\Documents\AltiumLL\AltiumLL.PrjScr
+[Project3]
+ProjectPath=C:\Users\akash\Downloads\RAPC722BKZ\RAPC722BKZ.LibPkg
+[Project4]
+ProjectPath=C:\Users\akash\Downloads\67068-8000\67068-8000.LibPkg
+[Project5]
+ProjectPath=C:\Users\akash\Downloads\H203PCX\H203PCX.LibPkg
+[Project6]
+ProjectPath=O2 level project\O2 level project.PrjPcb
+[Project7]
+ProjectPath=pcb design 2\multisheet\multisheet create compound\multisheet create compound.PrjPcb
+[Project8]
+ProjectPath=ajay pcb\ajay\ajay.PrjPcb
+[Project9]
+ProjectPath=ajay pcb\ajay\Integrated_Library1.LibPkg

@@ -1,0 +1,7 @@
+_Lcd8_Display: CODE, 1736 0 41
+_Lcd8_Init: CODE, 1647 0 25
+_main: CODE, 1777 0 271
+_Delay: CODE, 1627 0 20
+_Lcd8_Write: CODE, 1701 0 35
+_Lcd8_Command: CODE, 1672 0 29
+Total: 421

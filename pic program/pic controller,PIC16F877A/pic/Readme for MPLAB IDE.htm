@@ -1,0 +1,1999 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>MPLAB IDE Release Notes</title>
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:Arial;}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.3in;
+	text-indent:-.3in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.4in;
+	text-indent:-.4in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:Arial;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:Arial;}
+h4
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.6in;
+	text-indent:-.6in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+h5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.7in;
+	text-indent:-.7in;
+	font-size:13.0pt;
+	font-family:Arial;
+	font-style:italic;}
+h6
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.8in;
+	text-indent:-.8in;
+	font-size:11.0pt;
+	font-family:"Times New Roman";}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.9in;
+	text-indent:-.9in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.1in;
+	text-indent:-1.1in;
+	font-size:11.0pt;
+	font-family:Arial;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:10.0pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.MsoNormalIndent, li.MsoNormalIndent, div.MsoNormalIndent
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.MsoListNumber, li.MsoListNumber, div.MsoListNumber
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.MsoList2, li.MsoList2, div.MsoList2
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.5in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.MsoListBullet2, li.MsoListBullet2, div.MsoListBullet2
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.5in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.MsoListBullet3, li.MsoListBullet3, div.MsoListBullet3
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:Arial;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:Arial;}
+p.Heading0, li.Heading0, div.Heading0
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.Computer, li.Computer, div.Computer
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p.ListBullet2NoSpace, li.ListBullet2NoSpace, div.ListBullet2NoSpace
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.NormalNoSpace, li.NormalNoSpace, div.NormalNoSpace
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.ListBulletNoSpace, li.ListBulletNoSpace, div.ListBulletNoSpace
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:Arial;}
+span.ComputerChar
+	{font-family:"Courier New";}
+p.NormalTable, li.NormalTable, div.NormalTable
+	{margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:2.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.Answers, li.Answers, div.Answers
+	{margin-top:5.0pt;
+	margin-right:0in;
+	margin-bottom:5.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:Arial;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=Section1>
+
+<p class=Heading0>Release Notes for MPLAB<sup>®</sup> IDE v8.30</p>
+
+<p class=MsoNormal>Includes MPLAB Editor v4.30</p>
+
+<p class=MsoNormal>March 23, 2009</p>
+
+<p class=Heading0>Table of Contents</p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc223248952">1<span style='font-size:12.0pt;font-family:"Times New Roman";
+color:windowtext;text-decoration:none'>      </span>Operating System Support</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc223248953">2<span style='font-size:12.0pt;font-family:"Times New Roman";
+color:windowtext;text-decoration:none'>      </span>Reference Documents</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc223248954">3<span style='font-size:12.0pt;font-family:"Times New Roman";
+color:windowtext;text-decoration:none'>      </span>Minimum Required
+Configuration</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc223248955">4<span style='font-size:12.0pt;font-family:"Times New Roman";
+color:windowtext;text-decoration:none'>      </span>Installing/Uninstalling
+MPLAB IDE</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc223248956">5<span style='font-size:12.0pt;font-family:"Times New Roman";
+color:windowtext;text-decoration:none'>      </span>Network Administrator
+Information</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc223248957">6<span style='font-size:12.0pt;font-family:"Times New Roman";
+color:windowtext;text-decoration:none'>      </span>Multiple Installations,
+Instances and Tool Usage</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc223248958">7<span style='font-size:12.0pt;font-family:"Times New Roman";
+color:windowtext;text-decoration:none'>      </span>What's New in v8.30</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc223248959">8<span style='font-size:12.0pt;font-family:"Times New Roman";
+color:windowtext;text-decoration:none'>      </span>Repairs and Enhancements
+Made in v8.30</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc223248960">9<span style='font-size:12.0pt;font-family:"Times New Roman";
+color:windowtext;text-decoration:none'>      </span>Checksum Changes in v8.20</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc223248961">10<span style='font-size:12.0pt;font-family:"Times New Roman";
+color:windowtext;text-decoration:none'>     </span>Linker Script Usage in MPLAB
+IDE Projects</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc223248962">11<span style='font-size:12.0pt;font-family:"Times New Roman";
+color:windowtext;text-decoration:none'>     </span>Debug/Release Selection for
+Language Tools</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc223248963">12<span style='font-size:12.0pt;font-family:"Times New Roman";
+color:windowtext;text-decoration:none'>     </span>Known Problems</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc223248964">13<span style='font-size:12.0pt;font-family:"Times New Roman";
+color:windowtext;text-decoration:none'>     </span>Microchip Plug-In Tools</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc223248965">14<span style='font-size:12.0pt;font-family:"Times New Roman";
+color:windowtext;text-decoration:none'>     </span>Customer Support</a></span></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><span style='color:blue'><a
+href="#_Toc223248966">15<span style='font-size:12.0pt;font-family:"Times New Roman";
+color:windowtext;text-decoration:none'>     </span>License Agreements</a></span></span></p>
+
+<h1>1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><a name="_Toc223248952"></a><a name="PC_Operating_System_Support_List"></a><a
+name="_Ref118886514">Operating System Support</a></h1>
+
+<p class=MsoNormal>This tool has been tested under the following PC operating
+systems:</p>
+
+<p class=MsoNormal>Windows<sup><span style='font-size:12.0pt'>®</span></sup>
+2000 SP4, Windows XP SP2*, and Windows Vista™ OSs*</p>
+
+<p class=MsoNormal>* Several hardware tools now have 64-bit USB device drivers.
+See the table below.</p>
+
+<p class=MsoNormal><b>Table: 64-Bit OS USB Device Driver Support by Tool</b></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='margin-left:5.4pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=318 valign=top style='width:238.5pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace><b>Tool Name</b></p>
+  </td>
+  <td width=132 valign=top style='width:99.0pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace><b>64-Bit Support</b></p>
+  </td>
+  <td width=133 valign=top style='width:99.9pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace><b>No 64-Bit Support</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=318 valign=top style='width:238.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>MPLAB ICD 2 In-Circuit Debugger</p>
+  </td>
+  <td width=132 valign=top style='width:99.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>P/N 10-00397</p>
+  </td>
+  <td width=133 valign=top style='width:99.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>P/N 10-00319</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=318 valign=top style='width:238.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>MPLAB PM3 Device Programmer</p>
+  </td>
+  <td width=132 valign=top style='width:99.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>P/N 10-00398</p>
+  </td>
+  <td width=133 valign=top style='width:99.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>P/N 10-00359</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=318 valign=top style='width:238.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>MPLAB REAL ICE In-Circuit Emulator</p>
+  </td>
+  <td width=132 valign=top style='width:99.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>All</p>
+  </td>
+  <td width=133 valign=top style='width:99.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>None</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=318 valign=top style='width:238.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>MPLAB ICD 3 In-Circuit Debugger</p>
+  </td>
+  <td width=132 valign=top style='width:99.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>All</p>
+  </td>
+  <td width=133 valign=top style='width:99.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>None.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=318 valign=top style='width:238.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PICkit 2 Programmer/Debug Express</p>
+  </td>
+  <td width=132 valign=top style='width:99.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>All</p>
+  </td>
+  <td width=133 valign=top style='width:99.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>None</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=318 valign=top style='width:238.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PICkit 3 Programmer/Debug Express</p>
+  </td>
+  <td width=132 valign=top style='width:99.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>All</p>
+  </td>
+  <td width=133 valign=top style='width:99.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>None</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=318 valign=top style='width:238.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>PIC32MX Starter Kit</p>
+  </td>
+  <td width=132 valign=top style='width:99.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>All</p>
+  </td>
+  <td width=133 valign=top style='width:99.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>None</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=318 valign=top style='width:238.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>MPLAB ICE 2000 In-Circuit Emulator <br>
+     with USB Converter</p>
+  </td>
+  <td width=132 valign=top style='width:99.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>All</p>
+  </td>
+  <td width=133 valign=top style='width:99.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalNoSpace>None</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>Tools associated with MPLAB IDE may not support the same
+operating systems as MPLAB IDE. See individual tool readme's for more
+information.</p>
+
+<p class=MsoNormal><b><span style='color:black'>IMPORTANT NOTICE:</span></b><span
+style='color:black'> Beginning with MPLAB IDE v7.51, MPLAB IDE and its related
+components (except those listed below) will no longer be tested on <b>Windows
+98</b>, <b>Windows ME</b>, or <b>Windows NT</b></span><b><sup><span
+style='font-size:12.0pt'>®</span></sup></b><span style='color:black'> OSs. MPLAB IDE and its related components may continue to work under these operating
+systems, but their operation will no longer be verified through testing.</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:black'>Microchip will continue to support <b>Visual
+ProCMD</b> and <b>PM3CMD</b> on <b>Windows 98</b>.</span></p>
+
+<h1><a name="_Toc223248953"></a><a name="Reference_Documents"></a><a
+name="_Ref118886796">2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Reference Documents</a></h1>
+
+<p class=MsoNormal>The following documents may be found on our <a
+href="http://www.microchip.com/">website</a> or MPLAB IDE CD-ROM:</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>MPLAB IDE Quick Start (DS51281)</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>MPLAB IDE User's Guide (DS51519)</p>
+
+<p class=MsoNormal>On-line help (<i><u>Help&gt;Topics</u></i>) is also
+available for this tool:</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>System&gt;MPLAB IDE</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>System&gt;Editor</p>
+
+<p class=MsoNormal>The default locations of the Help files are:</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>C:\Program Files\Microchip\MPLAB IDE\Core\hlpMPLABIDE.chm</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>C:\Program Files\Microchip\MPLAB IDE\Core\hlpMPLABEditor.chm</p>
+
+<p class=MsoNormal><a name="Minimum_Required_Configuration"></a><a
+name="_Ref118886808">On-line Web Seminars are also available for this and other
+tools:</a></p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a
+href="http://techtrain.microchip.com/webseminars/ArchivedDetail.aspx?Active=46">Introduction
+to MPLAB IDE</a></p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a
+href="http://techtrain.microchip.com/webseminars/ArchivedDetail.aspx?Active=43">Introduction
+to Microchip’s Development Tools</a></p>
+
+<h1><a name="_Toc223248954">3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Minimum Required Configuration</a></h1>
+
+<p class=MsoNormal>The following minimum configuration is required to run MPLAB
+IDE:</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>PC-compatible Pentium<sup>®</sup>-class system</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Supported Windows operating system (see section 1)</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>128 MB memory (512 MB recommended)</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>400 MB of hard disk space</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Internet Explorer 5.0 or greater for installation and on-line
+Help</p>
+
+<h1><a name="_Toc223248955"></a><a name="Installing_Uninstalling_Website"></a><a
+name="_Ref118886813">4<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Installing/Uninstalling MPLAB IDE</a></h1>
+
+<p class=MsoNormal>Basic steps for installing/uninstalled MPLAB IDE are given
+below. For more information see the MPLAB IDE Help file.</p>
+
+<p class=MsoNormal><b>To install MPLAB IDE on your system:</b></p>
+
+<p class=MsoNormal>For some Windows OSs, administrative access is required in
+order to install software on a PC.</p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>If installing from a CD-ROM, place the disk into a CD drive.
+Follow the on-screen menu to install MPLAB IDE. If no on-screen menu appears,
+use Windows Explorer to find and execute the CD-ROM menu, <span
+class=ComputerChar>menu.exe</span>.</p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>If downloading MPLAB IDE from the Microchip web site (<a
+href="http://www.microchip.com/">www.microchip.com</a>), locate the download (<span
+class=ComputerChar>.zip</span>) file, select the file and save it to the PC.
+Unzip the file and execute the resulting <span class=ComputerChar>setup.exe</span>
+file to install.</p>
+
+<p class=MsoNormal><b>To uninstall MPLAB IDE:</b></p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Select <i><u>Start&gt;Settings&gt;Control Panel</u></i> to open
+the Control Panel.</p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Double click on “Add/Remove Programs”. Find MPLAB IDE on the list
+and click on it.</p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Click <b>Change/Remove</b> to remove the program from your
+system.</p>
+
+<h1><a name="_Toc223248956">5<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Network Administrator Information</a></h1>
+
+<p class=MsoNormal>Note to network administrators on installing MPLAB IDE v7.30
+and later in a secure environment:</p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>MPLAB_X_YY.MST</span>
+file is a Windows installer transform file, located in the full zipped
+installation of MPLAB IDE vX.YY. This file can be used by domain administrators
+with Microsoft Active Directory and group policies to assign the application
+for software deployment in a security environment (local machines do not have
+admin rights). Microsoft Active Directory can be used to assign the application
+to local workstations. It has not been tested for &quot;assigning/publishing to
+users.&quot; If this is a first time install, you may need to install the <span
+style='font-family:"Courier New"'>isscript10.msi</span> first. Apply the
+transform file to the <span style='font-family:"Courier New"'>MPLAB_X_YY.MSI</span>
+installation file in the group policy object (GPO). All of the files in the
+MPLAB IDE vX.YY full download zip must be located on a shared network
+directory.</p>
+
+<h1><a name="_Toc223248957"></a><a name="_Ref146960838"></a><a
+name="Multiple_Installations"></a><a name="_Ref118886832">6<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Multiple Installations</a>, Instances and Tool Usage</h1>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=295 valign=top style='width:221.4pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Versions of MPLAB IDE installed</p>
+  </td>
+  <td width=295 valign=top style='width:221.4pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Multiple (as of v7.00)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=295 valign=top style='width:221.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Instances of MPLAB IDE run</p>
+  </td>
+  <td width=295 valign=top style='width:221.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>1 (recommended)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=295 valign=top style='width:221.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Number of debuggers and programmers that can run at the
+  same time under MPLAB IDE</p>
+  </td>
+  <td width=295 valign=top style='width:221.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Only 1 debugger or only 1 programmer (but not both)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=295 valign=top style='width:221.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Tools from the Tools menu that can be run with a debugger
+  or programmer under MPLAB IDE</p>
+  </td>
+  <td width=295 valign=top style='width:221.4pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal>Any tool from the Tools menu</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>Multiple versions of MPLAB IDE may be INSTALLED on the same
+PC.</p>
+
+<p class=MsoNormal><b>Note:</b> You still may not RUN multiple versions of
+MPLAB IDE at the same time, i.e., only one version will be registered on the
+PC.</p>
+
+<p class=MsoNormal>If necessary, you may switch between installed MPLAB IDE
+versions (i.e., change which one is registered). In general, to switch versions
+you simply double-click on the MPLAB IDE icon for the version you wish to run.
+A program named <a name="_Ref118886844"></a><a name="Whats_New_Updated"><span
+class=ComputerChar>mpswitch.exe</span> will run automatically in the
+background. The </a><span class=ComputerChar>mpswitch.exe</span> may take
+several minutes to complete. For specific details on switching between
+versions, see the MPLAB IDE Help file.</p>
+
+<p class=MsoNormal>Just as you can only run one VERSION of MPLAB IDE on your
+system, you should only run one INSTANCE of MPLAB IDE. And in that one
+instance, you can only use one debug/programmer tool at a time.</p>
+
+<p class=MsoNormal>Tools under the Tools menu may be used with either a debug
+or programmer tool. Obviously you can only choose one language toolsuite at a
+time in the Select Language Toolsuite dialog.</p>
+
+<p class=MsoNormal>For more on these topics, see the MPLAB IDE Help file.</p>
+
+<h1><a name="_Toc223248958">7<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>What's New </a>in v8.30</h1>
+
+<p class=ListBullet2NoSpace style='margin-left:.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>C compiler version displayed</b> – The version for supported
+Microchip C compilers is shown in the “Select Language Toolsuite” and Output
+window during build.</p>
+
+<p class=ListBullet2NoSpace style='margin-left:.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>Warn about using multiple MPLAB IDE instances</b> – A warning
+will pop up beginning with the second launching of MPLAB IDE.</p>
+
+<p class=ListBullet2NoSpace style='margin-left:.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>MPLAB PM3 Programming Executive</b> – A programming executive,
+like a debug executive, is used when programming low pin count dsPIC DSC
+devices.</p>
+
+<p class=ListBullet2NoSpace style='margin-left:.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>MPLAB ICD 2 programming pins no longer held low</b> – After
+MPLAB ICD 2 has programmed the target device using PGC/PGD, EMUC/EMUD and MCLR
+pins, these pins will be released instead of help low.</p>
+
+<p class=ListBullet2NoSpace style='margin-left:.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>DMCI updates </b>– The data monitor and control interface now
+supports the PIC32 MCUs DMA real-time read/write. Also, automated event
+sequencing is also supported.</p>
+
+<p class=ListBullet2NoSpace style='margin-left:.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>Additional command line programmers </b>– MPLAB REAL ICE in-circuit
+emulator and MPLAB ICD 3 in-circuit debugger now have command line programmer
+control.</p>
+
+<p class=ListBullet2NoSpace style='margin-left:.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>Additional KeeLoq support </b>– Additional device KeeLoq
+programmer support.</p>
+
+<p class=ListBullet2NoSpace style='margin-left:.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>EDS data view </b>– Memeory views that accommodate PIC24 MCU
+EDS.</p>
+
+<p class=ListBullet2NoSpace style='margin-left:.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>EEPROM variable byte view </b>– Select 1, 2, or 4 byte data
+display in the EEPROM window.</p>
+
+<p class=ListBullet2NoSpace style='margin-left:.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>PIC32MX Starter Kit recovery</b> – The starter kit device will
+now disallow incorrect bit values.</p>
+
+<p class=ListBullet2NoSpace style='margin-left:.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>PIC32MX MCU support on PICkit 3 </b>– Additional device
+support.</p>
+
+<h2>7.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>What’s New in v8.21</h2>
+
+<p class=ListBullet2NoSpace style='margin-left:.25in'><span style='font-family:
+Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>PIC32 Starter Kit</b> – the initial release of this starter
+kit.</p>
+
+<h1><a name="_Toc223248959">8<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Repairs and Enhancements Made in v8.30</a></h1>
+
+<p class=MsoNormal><b>MPLAB-1574:</b> Memory Gauge information is incorrect for
+the RAM PIC18F45K20 family</p>
+
+<p class=MsoNormal><b>MPLAB-1560:</b> 18F65J50 missing bank 15</p>
+
+<p class=MsoNormal><b>MPLAB-1559:</b> After building a large project changing
+focus to a different window and then back to MPLAB causes MPLAB to hang for 5
+seconds. This happens any time you change focus back to MPLAB.</p>
+
+<p class=MsoNormal><b>MPLAB-1558:</b> DAC registers do not show up in MPLAB IDE
+File Register or SFR window for dsPIC33FJ64MC804.</p>
+
+<p class=MsoNormal><b>MPLAB-1545:</b> Quick build always builds as Debug mode. 
+Quick build should build in Released Mode.</p>
+
+<p class=MsoNormal><b>MPLAB-1543:</b> A certain configuration bit will always
+read as a '0' on the silicon, but if hex file has a '1' in this location,
+verification on tool fails. Applies to PIC18F67J50.</p>
+
+<p class=MsoNormal><b>MPLAB-1540:</b> Memory Gauge showing incorrect negative
+memory data for devices PIC18F4520, PIC18F458, and PIC18F14k50.</p>
+
+<p class=MsoNormal><b>MPLAB-1539:</b> File Register location shows registers
+0xF00 to 0xF7F to be dashed, but they should have data in this region.  This
+affects 18F2620 and possibly others in the family.</p>
+
+<p class=MsoNormal><b>MPLAB-1534:</b> Outdenting a block of code does not
+behave as expected if the user's Tabs preference is set to 'Insert spaces'.</p>
+
+<p class=MsoNormal><b>MPLAB-1530:</b> Installation errors seen when installing
+MPLAB IDE in VISTA without turning UAC off or not running under ADMIN mode.</p>
+
+<p class=MsoNormal><b>MPLAB-1526:</b> Watch window address of SPI2BUF is in the
+incorrect place for the 24HJ32GP302.</p>
+
+<p class=MsoNormal><b>MPLAB-1524:</b> Using C18 v3.30, MPLAB IDE fails to build
+C projects for 18LF devices, displaying an error &quot;Unknown processor '18LXXXXX'
+&quot;.</p>
+
+<p class=MsoNormal><b>MPLAB-1521:</b> The MPLAB IDE Document Select dialog
+shows two listings for MPLAB ICD 2 Release Notes but has no listing for MPLAB
+ICD 3 Release Notes</p>
+
+<p class=MsoNormal><b>MPLAB-1510:</b> Errors in device file for the device
+family 18F87J90</p>
+
+<p class=MsoNormal><b>MPLAB-1506:</b> Last bit of SFRs are missing in watch
+window when SFR bit fields are expanded.</p>
+
+<p class=MsoNormal><b>MPLAB-1500:</b> For the PIC32MX family, the virtual
+address and value of structure of pointer as shown in watch window and local
+variable window does not match when using Real ICE.  Local variables window shows
+incorrect values.</p>
+
+<p class=MsoNormal><b>MPLAB-1492:</b> [Find in Files] Find in file option to
+'Look in subfolders' does not return matching strings.</p>
+
+<p class=MsoNormal><b>MPLAB-1477:</b> Bits 0-3 of CM2CON1 register are not
+implemented in .dev file for 18F14K50/18F13K50/18LF14K50/18LF13K50 family of devices.</p>
+
+<p class=MsoNormal><b>MPLAB-1454:</b> Workspace getting corrupted due to
+invalid command-line argument being added, when the user modifies the workspace
+to use language tools of previous versions. Applies to 18F family, Midrange,
+and Baseline Devices.</p>
+
+<p class=MsoNormal><b>MPLAB-1434:</b> <i><u>Configure&gt;Settings</u></i>, <b>Other</b>
+tab, select Help does nothing.</p>
+
+<p class=MsoNormal><b>MPLAB-1424:</b> Remove Warning on 64-bit versions of
+Windows that state &quot;MPLABE IDE does not currently support this OS&quot;</p>
+
+<p class=MsoNormal><b>MPLAB-1403:</b> MPLAB IDE will crash if several
+backspaces are used on a source line that has a software breakpoint set.</p>
+
+<p class=MsoNormal><b>MPLAB-1391:</b> Comment lines starting with # in assembly
+files of PIC32 MCU are not turned green.</p>
+
+<p class=MsoNormal><b>MPLAB-1316:</b> Two devices in the DS70286 data sheet are
+missing shared addresses in the ECAN section. Applies to dsPIC33FJ256GP506 and
+dsPIC33FJ256GP510.</p>
+
+<p class=MsoNormal><b>MPLAB-1315:</b> MPLAB IDE hangs when the user does
+&quot;Simulator-&gt;Run&quot; while building (assembling and linking) a
+project.</p>
+
+<p class=MsoNormal><b>MPLAB-1310:</b> MPASM Assembler Help needs to be modified
+- Now there is only one version of MPASM Assembler is being provided MPASMWIN.</p>
+
+<p class=MsoNormal><b>MPLAB-1221:</b> Project -&gt; Clean displays an incorrect
+warning in the output window when the source files are in different
+directories.</p>
+
+<p class=MsoNormal><b>MPLAB-1158:</b> With focus on a different Windows
+program, if the user clicks on the scrollbar in the MPLAB IDE editor and drags
+the scrollbar down, releasing the scroll bar results in the scrollbar popping
+back up to its initial position.</p>
+
+<p class=MsoNormal><b>MPLAB-1125:</b> When a large library is stepped into, the
+cursor gets lost.</p>
+
+<p class=MsoNormal><b>MPLAB-1045:</b> Failure to load MPLINK COFF file when
+building with relative output directory and &quot;generate map file&quot;
+option.</p>
+
+<p class=MsoNormal><b>MPLAB-1020:</b> The Data Memory Total displayed in the
+Memory Gauge is not correct for the PIC10F200 (the PIC10F202 is not correct
+either).</p>
+
+<p class=MsoNormal><b>MPLAB-451:</b> Project wizard adds the file highlighted
+by the mouse selection despite the keyboard selection of a different file</p>
+
+<p class=MsoNormal><b>MPLAB-401:</b> When a .s file that is a result of the
+build process is open in the editor and a build occurs that changes the .s
+file, the open editor window is not updated with the change.</p>
+
+<p class=MsoNormal><b>MPLAB-320:</b> &quot;Run to Cursor&quot; and &quot;Set PC
+at Cursor&quot; context menu items should be disabled when the MPLAB ICD 2 is
+not connected</p>
+
+<h1><a name="Known_Problems"></a><a name="_Ref118886852"></a><a
+name="_Ref158001420"></a><a name="_Toc223248960">9<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Checksum Changes in v8.30</a></h1>
+
+<p class=MsoNormal>PIC24FJ16GA002/004, PIC24FJ32GA002/004, PIC24FJ48GA002/004,
+PIC24FJ64GA002/004 – Program Specification DS39768 checksum calculation has
+changed.  Revision D of the programming spec has added several configuration
+bits to CW2 (bits 11-14, Flash Configuration Word 2) that are now part of the
+checksum calculation.  The new checksum calculation has been updated in this
+version of the MPLAB IDE.</p>
+
+<h2>9.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Checksum Changes in v8.20</h2>
+
+<p class=MsoNormal>PIC18F1230/1330 - Rev B to future silicon revisions will
+always set bit 3 of CONFIG4L (300006h) to a ‘0’. Therefore, the checksum
+configuration mask for this register will change from 0xF9 to 0xF1. The checksum
+calculation will no longer be adding this bit.</p>
+
+<h2>9.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Checksum Changes in v8.14</h2>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>PIC18F4585/2585 – Configuration mask for configuration words
+0x300008, 0x30000A, 0x30000C has been changed to 0x07 from 0x0F. This will
+enable the checksum to revert back to the older checksum calculation (v7.62 and
+older), while maintaining bit 3 to be a 1.</p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>PIC32MX440F128L – Device ID has changed to 0x6D.  Therefore, the
+blank checksum reference has changed to accommodate this value.</p>
+
+<h1><a name="_Toc223248961">10<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Linker Script Usage in MPLAB IDE Projects</a></h1>
+
+<p class=MsoNormal>Linker script files are used by a linker to generate
+application code. You no longer need to add a device-specific linker script
+file to your project; the linker will find the appropriate file for you.
+Exceptions are:</p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Projects using the MPLAB Assembler for PIC24 MCUs and dsPIC DSCs</p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Projects where you want to specifically add an edited linker
+script file</p>
+
+<p class=MsoNormal>See your language tool documentation for details.</p>
+
+<h1><a name="_Toc223248962">11<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Debug/Release Selection</a> for Language Tools</h1>
+
+<p class=MsoNormal>For some language tools, MPLAB IDE provides an automated way
+to perform debug setup using the “Build Configuration” drop-down box on the
+Project Manager toolbar or the “Build Configuration” item on the Project menu.</p>
+
+<p class=MsoNormal>To set up language tools for debug, select “Debug”. When
+your code is debugged and you are ready to release it (program the finished
+code into a device), select “Release”.</p>
+
+<p class=MsoNormal>For more information, see MPLAB IDE Help, MPLAB IDE
+Features&gt;Debug Features&gt;Build Configuration.</p>
+
+<h1><a name="_Toc223248963">12<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Known Problems</a></h1>
+
+<p class=MsoNormal>The following is a list of known problems. For information
+on <b>common problems</b>, <b>error messages</b> and <b>limitations</b>, please
+see the online help file for MPLAB IDE (hlpMPLABIDE.chm). Bolded prefix represents
+internal tracking numbers.</p>
+
+<p class=ListBulletNoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a href="#_Launch_Issues">Launch Issues</a></p>
+
+<p class=ListBulletNoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a href="#_Operating_System_Issues">Operating System Issues</a></p>
+
+<p class=ListBulletNoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><a href="#_General_Issues">General Issues</a></p>
+
+<h2><a name="_Launch_Issues"></a>12.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Launch Issues</h2>
+
+<p class=MsoNormal><b>Problems launching MPLAB IDE.</b></p>
+
+<p class=MsoNormal>This could be caused by a corrupted workspace file.</p>
+
+<p class=MsoListNumber>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Exit MPLAB IDE.</p>
+
+<p class=MsoListNumber>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Remove or rename the workspace file.</p>
+
+<p class=MsoListNumber>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Run the executable in the C:\Program Files\Microchip\MPLAB
+IDE\Utilities\SetDefaultMPLABStartup folder.</p>
+
+<p class=MsoListNumber>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Start MPLAB IDE.</p>
+
+<p class=MsoNormal>Docked windows can be placed outside of the IDE program
+boundaries.  Therefore, it may be difficult to locate these windows when
+switching to a different monitor.  Here are some steps that will reset this
+information:</p>
+
+<p class=MsoListNumber>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Exit MPLAB IDE.</p>
+
+<p class=MsoListNumber>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Remove or rename the workspace file.</p>
+
+<p class=MsoListNumber>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Run the executable in the C:\Program Files\Microchip\MPLAB
+IDE\Utilities\SetDefaultMPLABStartup folder.</p>
+
+<p class=MsoListNumber>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Start MPLAB IDE.</p>
+
+<p class=MsoNormal><b>The splash screen flashes, but MPLAB IDE will not launch</b></p>
+
+<p class=MsoNormal>When you try to start MPLAB IDE, the splash screen flashes
+by, but the application does not launch.</p>
+
+<p class=MsoNormal>(1) Applies to MPLAB IDE versions 7.01 and 7.10:</p>
+
+<p class=MsoNormal>Occurs on PCs with non-administrator (user-only) privileges.</p>
+
+<p class=MsoNormal><b>Note:</b> Administrator rights are required to install,
+but should not be required to run.</p>
+
+<p class=MsoNormal>The workaround is to modify the target path on the MPLAB IDE
+shortcut and append the option <span style='font-family:"Courier New"'>-noswitch</span>:</p>
+
+<p class=MsoNormal><span style='font-family:"Courier New"'>mplab.exe -noswitch</span></p>
+
+<p class=MsoNormal>You can reach the target path by selecting the MPLAB IDE
+icon on the desktop, right-clicking properties, and then selecting the shortcut
+tab.</p>
+
+<p class=MsoNormal>(2) Applies to MPLAB IDE version 7.61a:</p>
+
+<p class=MsoNormal>You will need to remove the following entry from the PC
+registry:</p>
+
+<p class=MsoNormal>[-HKEY_CURRENT_USER\Software\Microchip\MPLAB
+IDE\DebugDisplays]</p>
+
+<p class=MsoNormal>Select Start&gt;Run, enter <span style='font-family:"Courier New"'>regedit</span>
+or <span style='font-family:"Courier New"'>regedt32</span> after “Open”, and
+click <b>OK</b> to open the registry for editing.</p>
+
+<p class=MsoNormal><b>MPLAB IDE used to work, but now it will not launch</b></p>
+
+<p class=MsoNormal>Items to check are:</p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Did you recently install another version of MPLAB IDE? Please see
+section 6 for information on switching between versions of MPLAB IDE.</p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Did you recently install other software? If so, it may have
+overwritten a system DLL in such a way that other applications cannot use it.
+Consult the software documentation and the Windows OS documentation to
+determine how to repair or reinstall the correct system DLL.</p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Did you recently edit your PC registry? MPLAB IDE uses the
+registry to find related files. Try reinstalling MPLAB IDE.</p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Do you have virus protection software on your machine? Try other
+programs on your PC to see if they are functioning correctly. If not, you may
+have a virus.</p>
+
+<h2><a name="_Operating_System_Issues"></a>12.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Operating System Issues</h2>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Once the program is installed and you attempt to run it, you
+might receive an error stating that a <span style='font-family:"Courier New"'>dll</span>
+file failed to register. This is caused when the Windows OS does not allow the
+MPLAB IDE installation to register the file for some reason. You will need to
+select <i><u>Start&gt;Programs&gt;Microchip&gt;MPLAB IDE vx.xx&gt;Setup MPLAB
+Tools</u></i> and run Repair to install and register the file.</p>
+
+<h3>12.2.1<span style='font:7.0pt "Times New Roman"'> </span>Windows Vista OS</h3>
+
+<p class=MsoNormal><b>MPLAB-813:</b> You must turn off User Account Control in
+order to switch between MPLAB IDE versions. This is accessed through the
+Control Panel &gt; User Accounts &gt; Turn User Account Control on or off.</p>
+
+<p class=MsoNormal><b>MPLAB-938:</b> Build problems seen while building a CCS
+project. Sometimes a project builds fine, and sometimes it fails. At this time,
+CCS does not support Vista.</p>
+
+<h3>12.2.2<span style='font:7.0pt "Times New Roman"'> </span>Windows 98,
+Windows ME, Windows NT OSs</h3>
+
+<p class=MsoNormal><b><span style='color:black'>IMPORTANT NOTICE:</span></b><span
+style='color:black'> Beginning with MPLAB IDE v7.51, MPLAB IDE and most
+components will no longer be tested on <b>Windows 98</b>, <b>Windows ME</b>, or
+<b>Windows NT</b>.  MPLAB IDE and its related components may continue to work
+under these operating systems, but their operation will no longer be verified
+through testing.</span></p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>On Windows 98/ME, for every open Editor window, a message box
+entitled &quot;File Time warning&quot; appears with the content, &quot;The
+parameter is incorrect&quot;.  This happens after a build or after minimizing
+and restoring the application's main window.</p>
+
+<p class=MsoNormal style='margin-left:.25in'><b>Fix:</b> Close MPLAB IDE and
+run the batch file located, by default, at:</p>
+
+<p class=MsoNormal style='margin-left:.25in'><span style='font-family:"Courier New"'>C:\Program
+Files\Microchip\MPLAB IDE\Core\Editor\Register Old Editor 9x.bat</span></p>
+
+<p class=MsoNormal style='margin-left:.25in'>Restart MPLAB IDE and select <i><u>Help&gt;About
+MPLAB IDE</u></i>.  Verify that <span style='font-family:"Courier New"'>MPEditor.dll</span>,
+and not <span style='font-family:"Courier New"'>MPEditor4.dll</span>, is
+registered.  If the batch file fails, you may need to update your PATH to
+include the path to <span style='font-family:"Courier New"'>regsvr32.exe</span>
+(wherever it is installed on your system.)</p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>&quot;File not found&quot; error on Windows NT systems, usually
+from an import or project manager build. This is a Windows NT v4.0 issue, not
+an MPLAB IDE issue. Update Windows NT v4.0 with service pack or set registry
+flag HK_CU\Network\DeferFlags = 1. For more information, see: <a
+href="http://support.microsoft.com/default.aspx?scid=kb;en-us;169138">http://support.microsoft.com/default.aspx?scid=kb;en-us;169138</a></p>
+
+<p class=MsoNormal><b>SSR 21029:</b> While most Windows NT users have been able
+to use the MPLAB IDE, a limited number of these users have reported being
+unable to run MPLAB IDE. Microchip Development Tools has determined that one
+cause of this problem is that Windows Desktop Update is not installed on the
+user's PC. See the Microsoft web site for more information about the Windows
+Desktop Update. Another cause of the problem may be due to a registration
+problem; the work-around: run <span style='font-family:"Courier New"'>register.bat</span>
+in the <span style='font-family:"Courier New"'>dll</span> subdirectory of the
+MPLAB IDE installation directory.</p>
+
+<h2><a name="_General_Issues"></a>12.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>General Issues</h2>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>MPLAB IDE v8.01 workspaces are incompatible with previous
+workspaces. Open the project file (<span class=ComputerChar>.mcp</span>) and
+reselect the device and other configuration settings before saving as a new
+workspace.</p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>When opening a workspace/project, MPLAB IDE crashes. The workspace/project
+file may be corrupt or from a previous version. Try opening a different
+workspace/project or MPLAB IDE alone as a test. If the workspace file (<span
+class=ComputerChar>.mcw</span>) is corrupt or from a previous version, delete
+it and then open the project file (<span class=ComputerChar>.mcp</span>). In this
+case, you may have to reselect the device and other configuration settings
+before saving as a new workspace. If the project file is corrupt (<span
+class=ComputerChar>.mcp</span>), you will have to rebuild the project.</p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>&quot;Access Denied&quot; message when trying to open a
+workspace. Make sure the workspace and related files have not been set to
+read-only, i.e., right-click on a file, select &quot;Properties&quot;, and
+check that &quot;Read-only&quot; is NOT selected.</p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Some language (build) tools may have problems if you use spaces,
+illegal characters or long file names for the file or project name. Consult the
+language tool documentation for details.</p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>If your language tools do not work correctly after installing
+this version of MPLAB IDE, go to our website or third party website to get the
+latest version of your language tool. If you have purchased the tool, contact
+your sales rep for an upgrade.</p>
+
+<p class=MsoListBullet><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>LCD Pixel View does not support these devices: PIC18F64J90,
+PIC18F65J90, PIC18F8393, PIC18F83J90, PIC18F8493, PIC18F84J90, PIC18F85J90.</p>
+
+<p class=MsoNormal><b>SSR 23550:</b> While in Animate mode, if you select <i><u>File&gt;Exit</u></i>,
+MPLAB IDE will crash.</p>
+
+<p class=MsoNormal><b>SSR 25806:</b> [COFF] dsPIC disassembly listing shows
+address rather than Wreg number.</p>
+
+<p class=MsoNormal><b>MPLAB-572:</b> Error messages are not properly centered
+when using dual monitors.</p>
+
+<p class=MsoNormal>To move any window that may be in focus which you can not
+see: Pressing Alt+&lt;space&gt; brings up the top left icon menu of the dialog
+followed by M to move the display then you can use the left or right, up or
+down arrows to move the display.</p>
+
+<p class=MsoNormal><b>MPLAB-661:</b> Call Stack Window: Simulator can hang when
+stepping through MPLAB C30 optimized code with the Call Stack window open.</p>
+
+<p class=MsoNormal><a name="Third_Party_Support"></a><a name="_Ref118886862"><b>MPLAB-1163:</b>
+</a><span class=ComputerChar>long</span> <span class=ComputerChar>long</span>
+types are not supported in COFF (for 16-bit language tools), which could affect
+debug support.</p>
+
+<p class=MsoNormal><b>MPLAB-1302:</b> [KUSEG] Virtual address column of Memory
+window does not refresh correctly when there is an overlap due to incorrect
+linker. Even after correcting linker script, it shows old value</p>
+
+<p class=MsoNormal><b>MPLAB-1345:</b> [C32 build options] - The 'Exclude
+floating-point library' check-boxes available under 'MPLAB PIC32 C compiler'
+and 'MPLAB PIC32 Linker' should shadow each other.</p>
+
+<p class=MsoNormal><b>MPLAB-1353:</b> When files generated by the build are
+placed into the ‘Others’ folder in the Project window, a plug-in exception
+occurs.</p>
+
+<p class=MsoNormal><b>MPLAB-1399:</b> When using the PIC32 Starter Kit,
+selecting Reset may result in the SK running with the toolbar grayed out.</p>
+
+<p class=MsoNormal><b>MPLAB-1460:</b> Using dual screens, with MPLAB IDE moved
+to a second screen, watch window mouseovers will appear on the first screen.
+Dual monitor systems depend on the configuration of the video display cards.
+Typically, the setting that provides correct mouseover positions is: “Extend my
+desktop onto this monitor”.</p>
+
+<p class=MsoNormal><b>MPLAB-1489:</b> PIC32MX devices - MPLAB IDE overwrites
+PWP bits of the configuration register (DEVCFG0) to default value 0xff. MPLAB
+IDE ignores config bit set in the code.</p>
+
+<p class=MsoNormal><b>MPLAB-1517:</b> PIC32MX devices - [Call Stack] Call Stack
+window displaying function parameters value incorrectly.</p>
+
+<p class=MsoNormal><b>MPLAB-1589:</b> dsPIC33FJ32GP304 - The RTCC Calibration
+and Configuration Register 'RCFGCAL' is wrongly called 'RTCCFG' in the MPLAB
+IDE. According to the datasheet DS70292B, the RTCC Calibration and
+Configuration Register, with address 0x0626, must be called 'RCFGCAL' and not
+'RTCCFG'.</p>
+
+<h1><a name="Customer_Support"></a><a name="_Ref118886868"></a><a
+name="_Toc223248964">13<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Microchip Plug-In Tools</a></h1>
+
+<p class=MsoNormal>MPLAB IDE supports a number of Microchip plug-ins under its
+Tools menu.</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='margin-left:5.4pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=204 valign=top style='width:153.0pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable><b>Microchip Tool</b></p>
+  </td>
+  <td width=234 valign=top style='width:175.5pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable><b>Device Support</b></p>
+  </td>
+  <td width=145 valign=top style='width:108.9pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable><b>Help File</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=204 valign=top style='width:153.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>AN908 ACIM Tuning Interface</p>
+  </td>
+  <td width=234 valign=top style='width:175.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>dsPIC30F DSCs</p>
+  </td>
+  <td width=145 valign=top style='width:108.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>hlpAN908.chm</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=204 valign=top style='width:153.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>AN901 BLDC Tuning Interface</p>
+  </td>
+  <td width=234 valign=top style='width:175.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>dsPIC30F DSCs</p>
+  </td>
+  <td width=145 valign=top style='width:108.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>hlpAN901.chm</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=204 valign=top style='width:153.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>Data Monitor Control Interface</p>
+  </td>
+  <td width=234 valign=top style='width:175.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>N/A</p>
+  </td>
+  <td width=145 valign=top style='width:108.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>hlpDMCI.chm</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=204 valign=top style='width:153.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>dsPIC Filter Design</p>
+  </td>
+  <td width=234 valign=top style='width:175.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>dsPIC30F/33F DSCs</p>
+  </td>
+  <td width=145 valign=top style='width:108.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>hlpdsPICFD.chm</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=204 valign=top style='width:153.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>KeeLoq Plugin</p>
+  </td>
+  <td width=234 valign=top style='width:175.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>Secure Data Devices (HCS)</p>
+  </td>
+  <td width=145 valign=top style='width:108.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>hlpKEELOQ.chm</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=204 valign=top style='width:153.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>Memory Starter Kit</p>
+  </td>
+  <td width=234 valign=top style='width:175.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>Memory devices (serial EEPROM)</p>
+  </td>
+  <td width=145 valign=top style='width:108.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>See included user’s guide (DS22087)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=204 valign=top style='width:153.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>MPLAB Macros</p>
+  </td>
+  <td width=234 valign=top style='width:175.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>N/A</p>
+  </td>
+  <td width=145 valign=top style='width:108.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>hlpMPLABIDE.chm</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=204 valign=top style='width:153.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>RTOS Viewer</p>
+  </td>
+  <td width=234 valign=top style='width:175.5pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>Same as RTOS used*</p>
+  </td>
+  <td width=145 valign=top style='width:108.9pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=NormalTable>hlpMPLABIDE.chm</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>* The RTOS Viewer is part of MPLAB IDE. The actual RTOS is
+third party.</p>
+
+<p class=MsoNormal><b>Third-Party Tools:</b> See the <span class=ComputerChar>Readme
+for Third Party Tools.htm</span> for more on supported third-party tools.</p>
+
+<p class=MsoNormal><b>Debuggers, Programmers, and Starter Kits:</b> See the
+individual tool Readme files or other documentation for more information on
+each tool.</p>
+
+<h1><a name="_Toc223248965">14<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>Customer Support</a></h1>
+
+<h2>14.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>The
+Microchip Web Site</h2>
+
+<p class=MsoNormal>Microchip provides online support via our web site at <a
+href="http://www.microchip.com/">http://www.microchip.com</a>. This web site is
+used as a means to make files and information easily available to customers.
+Accessible by using your favorite Internet browser, the web site contains the
+following information:</p>
+
+<p class=MsoListBullet2><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Product Support - Data sheets and errata, application notes and
+sample programs, design resources, user's guides and hardware support
+documents, latest software releases and archived software</p>
+
+<p class=MsoListBullet2><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>General Technical Support - Frequently Asked Questions (FAQs),
+technical support requests, online discussion groups/forums (<a
+href="http://forum.microchip.com/">http://forum.microchip.com</a>), Microchip
+consultant program member listing</p>
+
+<p class=MsoListBullet2><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Business of Microchip - Product selector and ordering guides,
+latest Microchip press releases, listing of seminars and events, listings of
+Microchip sales offices, distributors and factory representatives</p>
+
+<h2>14.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Development
+Systems Customer Change Notification Service</h2>
+
+<p class=MsoNormal>Microchip's customer notification service helps keep
+customers current on Microchip products. Subscribers will receive e-mail
+notification whenever there are changes, updates, revisions or errata related
+to a specified product family or development tool of interest.</p>
+
+<p class=MsoNormal>To register, access the Microchip web site at
+www.microchip.com, click on Customer Change Notification and follow the
+registration instructions.</p>
+
+<p class=MsoNormal>The Development Systems product group categories are:</p>
+
+<p class=MsoListBullet2><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Compilers – The latest information on Microchip C compilers,
+assemblers, linkers and other language tools. These include all MPLAB C
+compilers; all MPLAB assemblers (including MPASM™ assembler); all MPLAB linkers
+(including MPLINK™ object linker); and all MPLAB librarians (including MPLIB™
+object librarian).</p>
+
+<p class=MsoListBullet2><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Emulators – The latest information on Microchip in-circuit
+emulators. These include the MPLAB REAL ICE™, MPLAB ICE 2000 and MPLAB ICE 4000
+in-circuit emulators</p>
+
+<p class=MsoListBullet2><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>In-Circuit Debuggers – The latest information on Microchip
+in-circuit debuggers. These include the MPLAB ICD 2 in-circuit debugger and
+PICkit™ 2 debug express.</p>
+
+<p class=MsoListBullet2><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>MPLAB® IDE – The latest information on Microchip MPLAB IDE, the
+Windows® Integrated Development Environment for development systems tools. This
+list is focused on the MPLAB IDE, MPLAB IDE Project Manager, MPLAB Editor and
+MPLAB SIM simulator, as well as general editing and debugging features.</p>
+
+<p class=MsoListBullet2><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Programmers – The latest information on Microchip programmers.
+These include the MPLAB PM3 and PRO MATE II device programmers and the
+PICSTART® Plus and PICkit 1 and 2 development programmers.</p>
+
+<h2>14.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Additional
+Support</h2>
+
+<p class=MsoNormal>Users of Microchip products can receive assistance through
+several channels:</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Distributor or Representative</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Local Sales Office</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Field Application Engineer (FAE)</p>
+
+<p class=ListBullet2NoSpace><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Technical Support</p>
+
+<p class=MsoNormal>Customers should contact their distributor, representative
+or field application engineer (FAE) for support. Local sales offices are also
+available to help customers. A listing of sales offices and locations is
+available on our website.</p>
+
+<p class=MsoNormal>Technical support is available through the web site at: <a
+href="http://support.microchip.com/">http://support.microchip.com</a></p>
+
+<h1><a name="_Toc223248966"></a><a name="License_Agreements"></a><a
+name="_Ref118886875">15<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span>License Agreements</a></h1>
+
+<p class=MsoNormal>Microchip’s license agreement accompanying the MPLAB IDE
+governs your use of the software.  In addition, certain files or code
+accompanying this software are governed by third party licenses.  You are
+responsible for complying with these license agreements.  For your convenience,
+we have posted the third party licenses below.</p>
+
+<h2>15.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Copyright
+notice for strlcpy() and strlcat()</h2>
+
+<p class=MsoNormal>Copyright (c) 1998 Todd C. Miller <a
+href="mailto:Todd.Miller@courtesan.com">Todd.Miller@courtesan.com</a><br>
+All rights reserved.</p>
+
+<p class=MsoNormal>Redistribution and use in source and binary forms, with or
+without modification, are permitted provided that the following conditions are
+met:</p>
+
+<p class=MsoListNumber>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.</p>
+
+<p class=MsoListNumber>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.</p>
+
+<p class=MsoListNumber>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>The name of the author may not be used to endorse or promote products
+derived from this software without specific prior written permission.</p>
+
+<p class=MsoNormal>THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO
+EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGE.</p>
+
+<h2>15.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Copyright
+notice for Henry Spencer's implementation of regex</h2>
+
+<p class=MsoNormal>Copyright (c) 1992 Henry Spencer.<br>
+Copyright (c) 1992, 1993<br>
+The Regents of the University of California.  All rights reserved.</p>
+
+<p class=MsoNormal>This code is derived from software contributed to Berkeley by Henry Spencer of the University of Toronto.</p>
+
+<p class=MsoNormal>Redistribution and use in source and binary forms, with or
+without modification, are permitted provided that the following conditions are
+met:</p>
+
+<p class=MsoListNumber>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.</p>
+
+<p class=MsoListNumber>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.</p>
+
+<p class=MsoListNumber>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>All advertising materials mentioning features or use of this software
+must display the following acknowledgement:</p>
+
+<p class=MsoListNumber>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>This product includes software developed by the University of California, Berkeley and its contributors.</p>
+
+<p class=MsoListNumber>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Neither the name of the University nor the names of its contributors may
+be used to endorse or promote products derived from this software without
+specific prior written permission.</p>
+
+<p class=MsoNormal>THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS
+``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+
+<p class=MsoNormal>@(#)regex.h      8.2 (Berkeley) 1/3/94</p>
+
+<h2>15.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>License
+notice for Apache Xerces </h2>
+
+<p class=MsoNormal>=========================================================================</p>
+
+<p class=NormalNoSpace>NOTICE file corresponding to section 4(d) of the Apache
+License, </p>
+
+<p class=NormalNoSpace>Version 2.0, in this case for the Apache Xerces
+distribution.</p>
+
+<p class=MsoNormal>=========================================================================</p>
+
+<p class=MsoNormal>This product includes software developed by<br>
+The Apache Software Foundation (<a href="http://www.apache.org/">http://www.apache.org/</a>).</p>
+
+<p class=MsoNormal>Portions of this software were originally based on the
+following:<br>
+   - software copyright (c) 1999, IBM Corporation., <a
+href="http://www.ibm.com/">http://www.ibm.com</a>.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=NormalNoSpace align=center style='text-align:center'>Apache License</p>
+
+<p class=NormalNoSpace align=center style='text-align:center'>Version 2.0,
+January 2004</p>
+
+<p class=NormalNoSpace align=center style='text-align:center'><a
+href="http://www.apache.org/licenses/">http://www.apache.org/licenses/</a></p>
+
+<p class=MsoNormal>TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION</p>
+
+<ol style='margin-top:0in' start=1 type=1>
+ <li class=MsoNormal>Definitions.</li>
+</ol>
+
+<p class=MsoNormalIndent>&quot;License&quot; shall mean the terms and
+conditions for use, reproduction, and distribution as defined by Sections 1
+through 9 of this document.</p>
+
+<p class=MsoNormalIndent>&quot;Licensor&quot; shall mean the copyright owner or
+entity authorized by the copyright owner that is granting the License.</p>
+
+<p class=MsoNormalIndent>&quot;Legal Entity&quot; shall mean the union of the
+acting entity and all other entities that control, are controlled by, or are
+under common control with that entity. For the purposes of this definition,
+&quot;control&quot; means (i) the power, direct or indirect, to cause the
+direction or management of such entity, whether by contract or otherwise, or
+(ii) ownership of fifty percent (50%) or more of the outstanding shares, or
+(iii) beneficial ownership of such entity.</p>
+
+<p class=MsoNormalIndent>&quot;You&quot; (or &quot;Your&quot;) shall mean an
+individual or Legal Entity exercising permissions granted by this License.</p>
+
+<p class=MsoNormalIndent>&quot;Source&quot; form shall mean the preferred form
+for making modifications, including but not limited to software source code,
+documentation source, and configuration files.</p>
+
+<p class=MsoNormalIndent>&quot;Object&quot; form shall mean any form resulting
+from mechanical transformation or translation of a Source form, including but
+not limited to compiled object code, generated documentation, and conversions
+to other media types.</p>
+
+<p class=MsoNormalIndent>&quot;Work&quot; shall mean the work of authorship,
+whether in Source or Object form, made available under the License, as
+indicated by a copyright notice that is included in or attached to the work (an
+example is provided in the Appendix below).</p>
+
+<p class=MsoNormalIndent>&quot;Derivative Works&quot; shall mean any work,
+whether in Source or Object form, that is based on (or derived from) the Work
+and for which the editorial revisions, annotations, elaborations, or other
+modifications represent, as a whole, an original work of authorship. For the
+purposes of this License, Derivative Works shall not include works that remain
+separable from, or merely link (or bind by name) to the interfaces of, the Work
+and Derivative Works thereof.</p>
+
+<p class=MsoNormalIndent>&quot;Contribution&quot; shall mean any work of
+authorship, including the original version of the Work and any modifications or
+additions to that Work or Derivative Works thereof, that is intentionally
+submitted to Licensor for inclusion in the Work by the copyright owner or by an
+individual or Legal Entity authorized to submit on behalf of the copyright
+owner. For the purposes of this definition, &quot;submitted&quot; means any
+form of electronic, verbal, or written communication sent to the Licensor or
+its representatives, including but not limited to communication on electronic
+mailing lists, source code control systems, and issue tracking systems that are
+managed by, or on behalf of, the Licensor for the purpose of discussing and
+improving the Work, but excluding communication that is conspicuously marked or
+otherwise designated in writing by the copyright owner as &quot;Not a
+Contribution.&quot;</p>
+
+<p class=MsoNormalIndent>&quot;Contributor&quot; shall mean Licensor and any
+individual or Legal Entity on behalf of whom a Contribution has been received
+by Licensor and subsequently incorporated within the Work.</p>
+
+<ol style='margin-top:0in' start=2 type=1>
+ <li class=MsoNormal>Grant of Copyright License. Subject to the terms and
+     conditions of this License, each Contributor hereby grants to You a
+     perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+     copyright license to reproduce, prepare Derivative Works of, publicly
+     display, publicly perform, sublicense, and distribute the Work and such
+     Derivative Works in Source or Object form.</li>
+ <li class=MsoNormal>Grant of Patent License. Subject to the terms and
+     conditions of this License, each Contributor hereby grants to You a
+     perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+     (except as stated in this section) patent license to make, have made, use,
+     offer to sell, sell, import, and otherwise transfer the Work, where such
+     license applies only to those patent claims licensable by such Contributor
+     that are necessarily infringed by their Contribution(s) alone or by
+     combination of their Contribution(s) with the Work to which such
+     Contribution(s) was submitted. If You institute patent litigation against
+     any entity (including a cross-claim or counterclaim in a lawsuit) alleging
+     that the Work or a Contribution incorporated within the Work constitutes
+     direct or contributory patent infringement, then any patent licenses
+     granted to You under this License for that Work shall terminate as of the
+     date such litigation is filed.</li>
+ <li class=MsoNormal>Redistribution. You may reproduce and distribute copies of
+     the Work or Derivative Works thereof in any medium, with or without
+     modifications, and in Source or Object form, provided that You meet the
+     following conditions:</li>
+ <ol style='margin-top:0in' start=1 type=a>
+  <li class=MsoNormal>You must give any other recipients of the Work or
+      Derivative Works a copy of this License; and</li>
+  <li class=MsoNormal>You must cause any modified files to carry prominent
+      notices stating that You changed the files; and</li>
+  <li class=MsoNormal>You must retain, in the Source form of any Derivative
+      Works that You distribute, all copyright, patent, trademark, and
+      attribution notices from the Source form of the Work, excluding those
+      notices that do not pertain to any part of the Derivative Works; and</li>
+  <li class=MsoNormal>If the Work includes a &quot;NOTICE&quot; text file as part
+      of its distribution, then any Derivative Works that You distribute must
+      include a readable copy of the attribution notices contained within such
+      NOTICE file, excluding those notices that do not pertain to any part of
+      the Derivative Works, in at least one of the following places: within a
+      NOTICE text file distributed as part of the Derivative Works; within the
+      Source form or documentation, if provided along with the Derivative
+      Works; or, within a display generated by the Derivative Works, if and
+      wherever such third-party notices normally appear. The contents of the
+      NOTICE file are for informational purposes only and do not modify the
+      License. You may add Your own attribution notices within Derivative Works
+      that You distribute, alongside or as an addendum to the NOTICE text from
+      the Work, provided that such additional attribution notices cannot be
+      construed as modifying the License.</li>
+ </ol>
+</ol>
+
+<p class=MsoNormalIndent>You may add Your own copyright statement to Your
+modifications and may provide additional or different license terms and conditions
+for use, reproduction, or distribution of Your modifications, or for any such
+Derivative Works as a whole, provided Your use, reproduction, and distribution
+of the Work otherwise complies with the conditions stated in this License.</p>
+
+<ol style='margin-top:0in' start=5 type=1>
+ <li class=MsoNormal>Submission of Contributions. Unless You explicitly state
+     otherwise, any Contribution intentionally submitted for inclusion in the
+     Work by You to the Licensor shall be under the terms and conditions of
+     this License, without any additional terms or conditions. Notwithstanding
+     the above, nothing herein shall supersede or modify the terms of any
+     separate license agreement you may have executed with Licensor regarding
+     such Contributions.</li>
+ <li class=MsoNormal>Trademarks. This License does not grant permission to use
+     the trade names, trademarks, service marks, or product names of the
+     Licensor, except as required for reasonable and customary use in
+     describing the origin of the Work and reproducing the content of the
+     NOTICE file.</li>
+ <li class=MsoNormal>Disclaimer of Warranty. Unless required by applicable law
+     or agreed to in writing, Licensor provides the Work (and each Contributor
+     provides its Contributions) on an &quot;AS IS&quot; BASIS, WITHOUT
+     WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied,
+     including, without limitation, any warranties or conditions of TITLE,
+     NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE.
+     You are solely responsible for determining the appropriateness of using or
+     redistributing the Work and assume any risks associated with Your exercise
+     of permissions under this License.</li>
+ <li class=MsoNormal>Limitation of Liability. In no event and under no legal
+     theory, whether in tort (including negligence), contract, or otherwise,
+     unless required by applicable law (such as deliberate and grossly
+     negligent acts) or agreed to in writing, shall any Contributor be liable
+     to You for damages, including any direct, indirect, special, incidental,
+     or consequential damages of any character arising as a result of this
+     License or out of the use or inability to use the Work (including but not
+     limited to damages for loss of goodwill, work stoppage, computer failure
+     or malfunction, or any and all other commercial damages or losses), even
+     if such Contributor has been advised of the possibility of such damages.</li>
+ <li class=MsoNormal>Accepting Warranty or Additional Liability. While
+     redistributing the Work or Derivative Works thereof, You may choose to
+     offer, and charge a fee for, acceptance of support, warranty, indemnity,
+     or other liability obligations and/or rights consistent with this License.
+     However, in accepting such obligations, You may act only on Your own
+     behalf and on Your sole responsibility, not on behalf of any other
+     Contributor, and only if You agree to indemnify, defend, and hold each
+     Contributor harmless for any liability incurred by, or claims asserted
+     against, such Contributor by reason of your accepting any such warranty or
+     additional liability.</li>
+</ol>
+
+<p class=MsoNormal>END OF TERMS AND CONDITIONS</p>
+
+<p class=MsoNormal>APPENDIX: How to apply the Apache License to your work.</p>
+
+<p class=MsoNormal>To apply the Apache License to your work, attach the
+following boilerplate notice, with the fields enclosed by brackets
+&quot;[]&quot; replaced with your own identifying information. (Don't include
+the brackets!)  The text should be enclosed in the appropriate comment syntax
+for the file format. We also recommend that a file or class name and
+description of purpose be included on the same &quot;printed page&quot; as the
+copyright notice for easier identification within third-party archives.</p>
+
+<p class=MsoNormal>Copyright [yyyy] [name of copyright owner]</p>
+
+<p class=MsoNormal>Licensed under the Apache License, Version 2.0 (the
+&quot;License&quot;); you may not use this file except in compliance with the
+License. You may obtain a copy of the License at</p>
+
+<p class=MsoNormalIndent><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+
+<p class=MsoNormal>Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an &quot;AS IS&quot;
+BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and limitations
+under the License.</p>
+
+<h2>15.4<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>Pathan
+Open Source License</h2>
+
+<p class=MsoNormal>DecisionSoft Open Source Software is copyrighted software
+available under the DecisionSoft Open Source License (see below), based on the
+BSD License (<a href="http://www.opensource.org/osi3.0/licenses/bsd-license.php">http://www.opensource.org/osi3.0/licenses/bsd-license.php</a>).</p>
+
+<p class=MsoNormal>Pathan 1 and Pathan 2 dynamically link against, and include
+a modified header file from Xerces-C by the Apache Software Foundation.
+Xerces-C is covered by the Apache Software License (see previous section.)</p>
+
+<p class=MsoNormal>Pathan includes software developed by the Apache Software
+Foundation (<a href="http://www.apache.org/">http://www.apache.org/</a>).</p>
+
+<p class=MsoNormal><b>DecisionSoft Open Source License</b></p>
+
+<p class=MsoNormal>DecisionSoft Open Source Software is copyrighted software
+available under the DecisionSoft Open Source License, based on the BSD License.
+</p>
+
+<p class=MsoNormal>The DecisionSoft Open Source License</p>
+
+<p class=MsoNormal>This license is based on the BSD License template. </p>
+
+<p class=MsoNormal>Copyright (c) 2003, DecisionSoft Limited </p>
+
+<p class=MsoNormal>All rights reserved. </p>
+
+<p class=MsoNormal>Redistribution and use in source and binary forms, with or
+without modification, are permitted provided that the following conditions are
+met: </p>
+
+<p class=MsoNormal>* Redistributions of source code must retain the above
+copyright notice, this list of conditions and the following disclaimer. </p>
+
+<p class=MsoNormal>* Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution. </p>
+
+<p class=MsoNormal>* Neither the name of DecisionSoft Limited nor the names of
+its contributors may be used to endorse or promote products derived from this
+software without specific prior written permission. </p>
+
+<p class=MsoNormal>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES,
+INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE</p>
+
+<h2>15.5<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span>zlib
+License</h2>
+
+<p class=Computer><span style='font-size:9.0pt'>/* zlib.h -- interface of the
+'zlib' general purpose compression library</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>  version 1.2.3, July 18th,
+2005</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>&nbsp;</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>  Copyright (C) 1995-2005
+Jean-loup Gailly and Mark Adler</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>&nbsp;</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>  This software is provided
+'as-is', without any express or implied</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>  warranty.  In no event will
+the authors be held liable for any damages</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>  arising from the use of this
+software.</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>&nbsp;</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>  Permission is granted to
+anyone to use this software for any purpose,</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>  including commercial
+applications, and to alter it and redistribute it</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>  freely, subject to the
+following restrictions:</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>&nbsp;</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>  1. The origin of this
+software must not be misrepresented; you must not</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>     claim that you wrote the
+original software. If you use this software</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>     in a product, an
+acknowledgment in the product documentation would be</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>     appreciated but is not
+required.</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>  2. Altered source versions
+must be plainly marked as such, and must not be</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>     misrepresented as being
+the original software.</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>  3. This notice may not be
+removed or altered from any source distribution.</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>&nbsp;</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>  Jean-loup Gailly <a
+href="jloup@gzip.org">jloup@gzip.org</a></span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>  Mark Adler <a
+href="madler@alumni.caltech.edu">madler@alumni.caltech.edu</a></span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>&nbsp;</span></p>
+
+<p class=Computer><span style='font-size:9.0pt'>*/</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

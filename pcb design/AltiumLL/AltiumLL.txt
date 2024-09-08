@@ -1,0 +1,10 @@
+sklearn2k22@gmail.com
+@k203Job
+C:\Users\HP\Downloads
+C:\Users\HP\Documents\AltiumLL\SamacSys.SchLib
+C:\Users\HP\Documents\AltiumLL\SamacSys.PcbLib
+0
+
+80
+True
+True

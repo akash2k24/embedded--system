@@ -1,0 +1,9 @@
+Change Component Designator: OldDesignator=BR? NewDesignator=BR1
+Change Component Designator: OldDesignator=C? NewDesignator=C1
+Change Component Designator: OldDesignator=C? NewDesignator=C2
+Change Component Designator: OldDesignator=IC? NewDesignator=IC1
+Change Component Designator: OldDesignator=J? NewDesignator=J1
+Change Net Name : Old Net Name=NetBR?_1 New Net Name=NetBR1_1
+Change Net Name : Old Net Name=NetBR?_3 New Net Name=NetBR1_3
+Change Net Name : Old Net Name=NetBR?_4 New Net Name=NetBR1_4
+Added Member To Class: ClassName=multiSheet1 Member=Component C1 1000uf

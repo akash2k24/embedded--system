@@ -1,0 +1,22 @@
+Change Component Designator: OldDesignator=IC1 NewDesignator=IC?
+Add Component: Footprint Not Found CAPPRD500W60D1250H2500
+Add Component: Footprint Not Found CAPPRD500W60D1250H2500
+Add Component: Footprint Not Found CAPPRD500W60D1250H2500
+Add Component: Footprint Not Found CAPPRD500W60D1250H2500
+Add Pin To Net: Unknown Pin: Pin C?-N
+Add Pin To Net: Unknown Pin: Pin C?-N
+Add Pin To Net: Unknown Pin: Pin C?-N
+Add Pin To Net: Unknown Pin: Pin C?-N
+Add Pin To Net: Unknown Pin: Pin C?-P
+Change Net Name : Old Net Name=NetC1_1 New Net Name=NetC?_P
+Change Net Name : Old Net Name=NetC1_2 New Net Name=NetC?_N
+Add Net: Net with name "NetC?_P" already exists
+Add Net: Net with name "NetC?_P" already exists
+Add Class Member: Failed to add class member : Component C? EEUTA1E102LB
+Add Class Member: Failed to add class member : Component C? EEUTA1E102LB
+Add Class Member: Failed to add class member : Component C? EEUTA1E102LB
+Add Class Member: Failed to add class member : Component C? EEUTA1E102LB
+Added Member To Class: ClassName=Sheet1 Member=Component D? 1N4007-E3_73
+Added Member To Class: ClassName=Sheet1 Member=Component D? 1N4007-E3_73
+Added Member To Class: ClassName=Sheet1 Member=Component D? 1N4007-E3_73
+Added Member To Class: ClassName=Sheet1 Member=Component IC? LM7812ACT

@@ -1,0 +1,9 @@
+Added Component: Designator=R?(RESAD1987W56L1031D239)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "RS01A1R000FE12"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/rs01a1r000fe12/vishay?region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.mouser.com/ds/2/427/rsns-226497.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "RS01A1R000FE12"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "71-RS01A1R000FE12"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Vishay-Dale/RS01A1R000FE12?qs=pX8%252BLszEE6SqU%2F4VU%252B6gEw%3D%3D"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=O2 level Member=Component R? RS01A1R000FE12

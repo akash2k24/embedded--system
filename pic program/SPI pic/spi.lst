@@ -1,0 +1,494 @@
+
+
+HI-TECH Software PIC LITE Macro Assembler V9.82 build 9453 
+                                                                                               Fri Aug 16 15:01:57 2024
+
+HI-TECH Software Omniscient Code Generator (Lite mode) build 9453
+     1  0000                     opt subtitle "HI-TECH Software Omniscient Code Generator (Lite mode) build 9453"
+     2                           
+     3                           opt pagewidth 120
+     4                           
+     5                           	opt lm
+     6                           
+     7                           	processor	16F877A
+     8                           clrc	macro
+     9                           	bcf	3,0
+    10  0000                     	endm
+    11                           clrz	macro
+    12                           	bcf	3,2
+    13  0000                     	endm
+    14                           setc	macro
+    15                           	bsf	3,0
+    16  0000                     	endm
+    17                           setz	macro
+    18                           	bsf	3,2
+    19  0000                     	endm
+    20                           skipc	macro
+    21                           	btfss	3,0
+    22  0000                     	endm
+    23                           skipz	macro
+    24                           	btfss	3,2
+    25  0000                     	endm
+    26                           skipnc	macro
+    27                           	btfsc	3,0
+    28  0000                     	endm
+    29                           skipnz	macro
+    30                           	btfsc	3,2
+    31  0000                     	endm
+    32  0000                     indf	equ	0
+    33  0000                     indf0	equ	0
+    34  0002                     pc	equ	2
+    35  0002                     pcl	equ	2
+    36  0003                     status	equ	3
+    37  0004                     fsr	equ	4
+    38  0004                     fsr0	equ	4
+    39  0001                     c	equ	1
+    40  0000                     z	equ	0
+    41  000A                     pclath	equ	10
+    42                           # 2 "E:\pic program\SPI pic\spi.c"
+    43                           	psect config,class=CONFIG,delta=2 ;#
+    44                           # 2 "E:\pic program\SPI pic\spi.c"
+    45  2007  FF32               	dw 0xFFFE & 0xFFFB & 0xFFF7 & 0xFFBF & 0xFF7F & 0xFFFF & 0xFFFF & 0xFFFF ;#
+    46                           	FNROOT	_main
+    47                           	global	_SSPBUF
+    48                           psect	maintext,global,class=CODE,delta=2
+    49                           global __pmaintext
+    50  07AB                     __pmaintext:
+    51  0013                     _SSPBUF	set	19
+    52                           	global	_SSPCON
+    53  0014                     _SSPCON	set	20
+    54                           	global	_CARRY
+    55  0018                     _CARRY	set	24
+    56                           	global	_GIE
+    57  005F                     _GIE	set	95
+    58                           	global	_RB0
+    59  0030                     _RB0	set	48
+    60                           	global	_SSPIF
+    61  0063                     _SSPIF	set	99
+    62                           	global	_SSPSTAT
+    63  0094                     _SSPSTAT	set	148
+    64                           	global	_TRISB0
+    65  0430                     _TRISB0	set	1072
+    66                           	global	_TRISC3
+    67  043B                     _TRISC3	set	1083
+    68                           	global	_TRISC4
+    69  043C                     _TRISC4	set	1084
+    70                           	global	_TRISC5
+    71  043D                     _TRISC5	set	1085
+    72                           	global	_EEADR
+    73  010D                     _EEADR	set	269
+    74                           	global	_EEDATA
+    75  010C                     _EEDATA	set	268
+    76                           	global	_EECON1
+    77  018C                     _EECON1	set	396
+    78                           	global	_EECON2
+    79  018D                     _EECON2	set	397
+    80                           	global	_RD
+    81  0C60                     _RD	set	3168
+    82                           	global	_WR
+    83  0C61                     _WR	set	3169
+    84                           	global	_WREN
+    85  0C62                     _WREN	set	3170
+    86                           	file	"spi.as"
+    87                           	line	#
+    88                           psect cinit,class=CODE,delta=2
+    89                           global start_initialization
+    90  07A7                     start_initialization:
+    91                           
+    92                           psect cinit,class=CODE,delta=2
+    93                           global end_of_initialization
+    94                           
+    95                           ;End of C runtime variable initialization code
+    96                           
+    97  07A7                     end_of_initialization:
+    98  07A7  0183               clrf status
+    99  07A8  120A  118A  2FAB   ljmp _main	;jump to C main() function
+   100                           psect	cstackCOMMON,class=COMMON,space=1
+   101                           global __pcstackCOMMON
+   102  0070                     __pcstackCOMMON:
+   103                           	global	?_main
+   104  0070                     ?_main:	; 0 bytes @ 0x0
+   105                           	global	??_main
+   106  0070                     ??_main:	; 0 bytes @ 0x0
+   107  0070                     	ds	2
+   108 ;;Data sizes: Strings 0, constant 0, data 0, bss 0, persistent 0 stack 0
+   109 ;;Auto spaces:   Size  Autos    Used
+   110 ;; COMMON          14      2       2
+   111 ;; BANK0           80      0       0
+   112 ;; BANK1           80      0       0
+   113 ;; BANK3           96      0       0
+   114 ;; BANK2           96      0       0
+   115                           
+   116 ;;
+   117 ;; Pointer list with targets:
+   118                           
+   119                           
+   120                           
+   121 ;;
+   122 ;; Critical Paths under _main in COMMON
+   123 ;;
+   124 ;;   None.
+   125 ;;
+   126 ;; Critical Paths under _main in BANK0
+   127 ;;
+   128 ;;   None.
+   129 ;;
+   130 ;; Critical Paths under _main in BANK1
+   131 ;;
+   132 ;;   None.
+   133 ;;
+   134 ;; Critical Paths under _main in BANK3
+   135 ;;
+   136 ;;   None.
+   137 ;;
+   138 ;; Critical Paths under _main in BANK2
+   139 ;;
+   140 ;;   None.
+   141                           
+   142 ;;
+   143 ;;Main: autosize = 0, tempsize = 2, incstack = 0, save=0
+   144 ;;
+   145                           
+   146 ;;
+   147 ;;Call Graph Tables:
+   148 ;;
+   149 ;; ---------------------------------------------------------------------------------
+   150 ;; (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+   151 ;; ---------------------------------------------------------------------------------
+   152 ;; (0) _main                                                 2     2      0       0
+   153 ;;                                              0 COMMON     2     2      0
+   154 ;; ---------------------------------------------------------------------------------
+   155 ;; Estimated maximum stack depth 0
+   156 ;; ---------------------------------------------------------------------------------
+   157                           
+   158 ;; Call Graph Graphs:
+   159                           
+   160 ;; _main (ROOT)
+   161 ;;
+   162                           
+   163 ;; Address spaces:
+   164                           
+   165 ;;Name               Size   Autos  Total    Cost      Usage
+   166 ;;BITCOMMON            E      0       0       0        0.0%
+   167 ;;EEDATA             100      0       0       0        0.0%
+   168 ;;NULL                 0      0       0       0        0.0%
+   169 ;;CODE                 0      0       0       0        0.0%
+   170 ;;COMMON               E      2       2       1       14.3%
+   171 ;;BITSFR0              0      0       0       1        0.0%
+   172 ;;SFR0                 0      0       0       1        0.0%
+   173 ;;BITSFR1              0      0       0       2        0.0%
+   174 ;;SFR1                 0      0       0       2        0.0%
+   175 ;;STACK                0      0       0       2        0.0%
+   176 ;;ABS                  0      0       0       3        0.0%
+   177 ;;BITBANK0            50      0       0       4        0.0%
+   178 ;;BITSFR3              0      0       0       4        0.0%
+   179 ;;SFR3                 0      0       0       4        0.0%
+   180 ;;BANK0               50      0       0       5        0.0%
+   181 ;;BITSFR2              0      0       0       5        0.0%
+   182 ;;SFR2                 0      0       0       5        0.0%
+   183 ;;BITBANK1            50      0       0       6        0.0%
+   184 ;;BANK1               50      0       0       7        0.0%
+   185 ;;BITBANK3            60      0       0       8        0.0%
+   186 ;;BANK3               60      0       0       9        0.0%
+   187 ;;BITBANK2            60      0       0      10        0.0%
+   188 ;;BANK2               60      0       0      11        0.0%
+   189 ;;DATA                 0      0       0      12        0.0%
+   190                           
+   191                           	global	_main
+   192                           psect	maintext
+   193                           
+   194 ;; *************** function _main *****************
+   195 ;; Defined at:
+   196 ;;		line 18 in file "E:\pic program\SPI pic\spi.c"
+   197 ;; Parameters:    Size  Location     Type
+   198 ;;		None
+   199 ;; Auto vars:     Size  Location     Type
+   200 ;;		None
+   201 ;; Return value:  Size  Location     Type
+   202 ;;		None               void
+   203 ;; Registers used:
+   204 ;;		wreg, status,2
+   205 ;; Tracked objects:
+   206 ;;		On entry : 17F/0
+   207 ;;		On exit  : 0/0
+   208 ;;		Unchanged: 0/0
+   209 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   210 ;;      Params:         0       0       0       0       0
+   211 ;;      Locals:         0       0       0       0       0
+   212 ;;      Temps:          2       0       0       0       0
+   213 ;;      Totals:         2       0       0       0       0
+   214 ;;Total ram usage:        2 bytes
+   215 ;; This function calls:
+   216 ;;		Nothing
+   217 ;; This function is called by:
+   218 ;;		Startup code after reset
+   219 ;; This function uses a non-reentrant model
+   220 ;;
+   221                           psect	maintext
+   222                           	file	"E:\pic program\SPI pic\spi.c"
+   223                           	line	18
+   224                           	global	__size_of_main
+   225  0055                     	__size_of_main	equ	__end_of_main-_main
+   226                           	
+   227  07AB                     _main:	
+   228                           	opt	stack 8
+   229                           ; Regs used in _main: [wreg+status,2]
+   230                           	line	19
+   231                           	
+   232  07AB                     l2610:	
+   233                           ;spi.c: 19: TRISC5=TRISC3=TRISB0=0;
+   234  07AB  1683               	bsf	status, 5	;RP0=1, select bank1
+   235  07AC  1303               	bcf	status, 6	;RP1=0, select bank1
+   236  07AD  1006               	bcf	(1072/8)^080h,(1072)&7
+   237  07AE  1187               	bcf	(1083/8)^080h,(1083)&7
+   238  07AF  1287               	bcf	(1085/8)^080h,(1085)&7
+   239                           	line	20
+   240                           ;spi.c: 20: TRISC4=1;
+   241  07B0  1607               	bsf	(1084/8)^080h,(1084)&7
+   242                           	line	21
+   243                           	
+   244  07B1                     l2612:	
+   245                           ;spi.c: 21: SSPCON=0X20;
+   246  07B1  3020               	movlw	(020h)
+   247  07B2  1283               	bcf	status, 5	;RP0=0, select bank0
+   248  07B3  1303               	bcf	status, 6	;RP1=0, select bank0
+   249  07B4  0094               	movwf	(20)	;volatile
+   250                           	line	22
+   251                           	
+   252  07B5                     l2614:	
+   253                           ;spi.c: 22: SSPSTAT=0X00;
+   254  07B5  1683               	bsf	status, 5	;RP0=1, select bank1
+   255  07B6  1303               	bcf	status, 6	;RP1=0, select bank1
+   256  07B7  0194               	clrf	(148)^080h	;volatile
+   257                           	line	23
+   258                           	
+   259  07B8                     l2616:	
+   260                           ;spi.c: 23: RB0=1;
+   261  07B8  1283               	bcf	status, 5	;RP0=0, select bank0
+   262  07B9  1303               	bcf	status, 6	;RP1=0, select bank0
+   263  07BA  1406               	bsf	(48/8),(48)&7
+   264                           	line	24
+   265                           	
+   266  07BB                     l2618:	
+   267                           ;spi.c: 24: _delay((unsigned long)((10)*(20000000UL/4000.0)));
+   268                           	opt asmopt_off
+   269  07BB  3041               movlw	65
+   270  07BC  00F1               movwf	((??_main+0)+0+1),f
+   271  07BD  30EE               	movlw	238
+   272  07BE  00F0               movwf	((??_main+0)+0),f
+   273  07BF                     u2277:
+   274  07BF  0BF0               	decfsz	((??_main+0)+0),f
+   275  07C0  2FBF               	goto	u2277
+   276  07C1  0BF1               	decfsz	((??_main+0)+0+1),f
+   277  07C2  2FBF               	goto	u2277
+   278  07C3  0064               	clrwdt
+   279                           opt asmopt_on
+   280                           
+   281                           	line	26
+   282                           	
+   283  07C4                     l2620:	
+   284                           ;spi.c: 26: RB0=0;
+   285  07C4  1283               	bcf	status, 5	;RP0=0, select bank0
+   286  07C5  1303               	bcf	status, 6	;RP1=0, select bank0
+   287  07C6  1006               	bcf	(48/8),(48)&7
+   288                           	line	27
+   289                           	
+   290  07C7                     l2622:	
+   291                           ;spi.c: 27: SSPBUF=0X06;
+   292  07C7  3006               	movlw	(06h)
+   293  07C8  0093               	movwf	(19)	;volatile
+   294                           	line	28
+   295                           ;spi.c: 28: while(SSPIF==0);
+   296  07C9  2FCA               	goto	l687
+   297                           	
+   298  07CA                     l688:	
+   299                           	
+   300  07CA                     l687:	
+   301  07CA  1D8C               	btfss	(99/8),(99)&7
+   302  07CB  2FCD               	goto	u2221
+   303  07CC  2FCE               	goto	u2220
+   304  07CD                     u2221:
+   305  07CD  2FCA               	goto	l687
+   306  07CE                     u2220:
+   307                           	
+   308  07CE                     l689:	
+   309                           	line	29
+   310                           ;spi.c: 29: SSPIF=0;
+   311  07CE  118C               	bcf	(99/8),(99)&7
+   312                           	line	30
+   313                           ;spi.c: 30: RB0=1;
+   314  07CF  1406               	bsf	(48/8),(48)&7
+   315                           	line	32
+   316                           ;spi.c: 32: RB0=0;
+   317  07D0  1006               	bcf	(48/8),(48)&7
+   318                           	line	33
+   319                           	
+   320  07D1                     l2624:	
+   321                           ;spi.c: 33: SSPBUF=0X02;
+   322  07D1  3002               	movlw	(02h)
+   323  07D2  0093               	movwf	(19)	;volatile
+   324                           	line	34
+   325                           ;spi.c: 34: while(SSPIF==0);
+   326  07D3  2FD4               	goto	l690
+   327                           	
+   328  07D4                     l691:	
+   329                           	
+   330  07D4                     l690:	
+   331  07D4  1D8C               	btfss	(99/8),(99)&7
+   332  07D5  2FD7               	goto	u2231
+   333  07D6  2FD8               	goto	u2230
+   334  07D7                     u2231:
+   335  07D7  2FD4               	goto	l690
+   336  07D8                     u2230:
+   337                           	
+   338  07D8                     l692:	
+   339                           	line	35
+   340                           ;spi.c: 35: SSPIF=0;
+   341  07D8  118C               	bcf	(99/8),(99)&7
+   342                           	line	37
+   343                           	
+   344  07D9                     l2626:	
+   345                           ;spi.c: 37: SSPBUF=0X01;
+   346  07D9  3001               	movlw	(01h)
+   347  07DA  0093               	movwf	(19)	;volatile
+   348                           	line	38
+   349                           ;spi.c: 38: while(SSPIF==0);
+   350  07DB  2FDC               	goto	l693
+   351                           	
+   352  07DC                     l694:	
+   353                           	
+   354  07DC                     l693:	
+   355  07DC  1D8C               	btfss	(99/8),(99)&7
+   356  07DD  2FDF               	goto	u2241
+   357  07DE  2FE0               	goto	u2240
+   358  07DF                     u2241:
+   359  07DF  2FDC               	goto	l693
+   360  07E0                     u2240:
+   361                           	
+   362  07E0                     l695:	
+   363                           	line	39
+   364                           ;spi.c: 39: SSPIF=0;
+   365  07E0  118C               	bcf	(99/8),(99)&7
+   366                           	line	41
+   367                           	
+   368  07E1                     l2628:	
+   369                           ;spi.c: 41: SSPBUF=0X00;
+   370  07E1  0193               	clrf	(19)	;volatile
+   371                           	line	42
+   372                           ;spi.c: 42: while(SSPIF==0);
+   373  07E2  2FE3               	goto	l696
+   374                           	
+   375  07E3                     l697:	
+   376                           	
+   377  07E3                     l696:	
+   378  07E3  1D8C               	btfss	(99/8),(99)&7
+   379  07E4  2FE6               	goto	u2251
+   380  07E5  2FE7               	goto	u2250
+   381  07E6                     u2251:
+   382  07E6  2FE3               	goto	l696
+   383  07E7                     u2250:
+   384                           	
+   385  07E7                     l698:	
+   386                           	line	43
+   387                           ;spi.c: 43: SSPIF=0;
+   388  07E7  118C               	bcf	(99/8),(99)&7
+   389                           	line	45
+   390                           	
+   391  07E8                     l2630:	
+   392                           ;spi.c: 45: SSPBUF='b';
+   393  07E8  3062               	movlw	(062h)
+   394  07E9  0093               	movwf	(19)	;volatile
+   395                           	line	46
+   396                           ;spi.c: 46: while(SSPIF==0);
+   397  07EA  2FEB               	goto	l699
+   398                           	
+   399  07EB                     l700:	
+   400                           	
+   401  07EB                     l699:	
+   402  07EB  1D8C               	btfss	(99/8),(99)&7
+   403  07EC  2FEE               	goto	u2261
+   404  07ED  2FEF               	goto	u2260
+   405  07EE                     u2261:
+   406  07EE  2FEB               	goto	l699
+   407  07EF                     u2260:
+   408                           	
+   409  07EF                     l701:	
+   410                           	line	47
+   411                           ;spi.c: 47: SSPIF=0;
+   412  07EF  118C               	bcf	(99/8),(99)&7
+   413                           	line	48
+   414                           ;spi.c: 48: RB0=1;
+   415  07F0  1406               	bsf	(48/8),(48)&7
+   416  07F1  2FF2               	goto	l2632
+   417                           	line	50
+   418                           ;spi.c: 50: while(1)
+   419                           	
+   420  07F2                     l702:	
+   421                           	line	53
+   422                           	
+   423  07F2                     l2632:	
+   424                           ;spi.c: 51: {
+   425                           ;spi.c: 53: _delay((unsigned long)((10)*(20000000UL/4000.0)));
+   426                           	opt asmopt_off
+   427  07F2  3041               movlw	65
+   428  07F3  00F1               movwf	((??_main+0)+0+1),f
+   429  07F4  30EE               	movlw	238
+   430  07F5  00F0               movwf	((??_main+0)+0),f
+   431  07F6                     u2287:
+   432  07F6  0BF0               	decfsz	((??_main+0)+0),f
+   433  07F7  2FF6               	goto	u2287
+   434  07F8  0BF1               	decfsz	((??_main+0)+0+1),f
+   435  07F9  2FF6               	goto	u2287
+   436  07FA  0064               	clrwdt
+   437                           opt asmopt_on
+   438                           
+   439  07FB  2FF2               	goto	l2632
+   440                           	line	54
+   441                           	
+   442  07FC                     l703:	
+   443                           	line	50
+   444  07FC  2FF2               	goto	l2632
+   445                           	
+   446  07FD                     l704:	
+   447                           	line	55
+   448                           	
+   449  07FD                     l705:	
+   450                           	global	start
+   451  07FD  120A  118A  2800   	ljmp	start
+   452                           	opt stack 0
+   453                           GLOBAL	__end_of_main
+   454  0800                     	__end_of_main:
+   455 ;; =============== function _main ends ============
+   456                           
+   457                           	signat	_main,88
+   458                           psect	maintext
+   459                           	global	btemp
+   460  007E                     	btemp set 07Eh
+   461                           
+   462                           	DABS	1,126,2	;btemp
+   463                           	global	wtemp0
+   464  007E                     	wtemp0 set btemp
+
+
+HI-TECH Software PICC Macro Assembler V9.82 build 9453 
+Symbol Table                                                                                   Fri Aug 16 15:01:57 2024
+
+                  _RD 0C60                    _WR 0C61                   l700 07EB                   l701 07EF  
+                 l702 07F2                   l703 07FC                   l704 07FD                   l705 07FD  
+                 l690 07D4                   l691 07D4                   l692 07D8                   l693 07DC  
+                 l694 07DC                   l695 07E0                   l687 07CA                   l696 07E3  
+                 l688 07CA                   l697 07E3                   l689 07CE                   l698 07E7  
+                 l699 07EB                   _GIE 005F                   _RB0 0030                  l2610 07AB  
+                l2620 07C4                  l2612 07B1                  l2630 07E8                  l2622 07C7  
+                l2614 07B5                  l2632 07F2                  l2624 07D1                  l2616 07B8  
+                l2626 07D9                  l2618 07BB                  l2628 07E1                  u2220 07CE  
+                u2221 07CD                  u2230 07D8                  u2231 07D7                  u2240 07E0  
+                u2241 07DF                  u2250 07E7                  u2251 07E6                  u2260 07EF  
+                u2261 07EE                  u2277 07BF                  u2287 07F6                  _WREN 0C62  
+                _main 07AB                  btemp 007E                  start 0000                 ?_main 0070  
+               _EEADR 010D                 _CARRY 0018                 _SSPIF 0063                 status 0003  
+               wtemp0 007E          __end_of_main 0800                ??_main 0070                _EEDATA 010C  
+              _EECON1 018C                _EECON2 018D                _TRISB0 0430                _TRISC3 043B  
+              _TRISC4 043C                _TRISC5 043D                _SSPCON 0014                _SSPBUF 0013  
+      __pcstackCOMMON 0070            __pmaintext 07AB               _SSPSTAT 0094  end_of_initialization 07A7  
+ start_initialization 07A7         __size_of_main 0055  

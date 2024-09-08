@@ -1,0 +1,28 @@
+Add Component: Footprint Not Found DIP825W50P510L830H340Q4N
+Add Component: Footprint Not Found CAPPRD550W60D1050H2150
+Add Component: Footprint Not Found CAPPRD500W65D1000H3200
+Add Component: Footprint Not Found CAPPRD550W60D1050H2150
+Add Component: Footprint Not Found CAPPRD500W65D1000H3200
+Add Component: Footprint Not Found TO270P460X1020X2008-3P
+Add Component: Footprint Not Found TO254P470X1016X2019-3P
+Add Component: Footprint Not Found 2060452998404
+Add Pin To Net: Unknown Pin: Pin BR1-2
+Add Pin To Net: Unknown Pin: Pin C1-2
+Add Pin To Net: Unknown Pin: Pin C2-2
+Add Pin To Net: Unknown Pin: Pin C3-1
+Add Pin To Net: Unknown Pin: Pin C4-1
+Add Pin To Net: Unknown Pin: Pin IC1-2
+Add Pin To Net: Unknown Pin: Pin IC2-2
+Added Net: Name=NetBR1_1
+Added Net: Name=NetBR1_3
+Added Net: Name=NetBR1_4
+Added Net: Name=NetC2_1
+Added Net: Name=NetC4_2
+Add Class Member: Failed to add class member : Component BR1 DB107
+Add Class Member: Failed to add class member : Component C1 1000uf
+Add Class Member: Failed to add class member : Component C2 100uf
+Add Class Member: Failed to add class member : Component C3 1000uf
+Add Class Member: Failed to add class member : Component C4 100uf
+Add Class Member: Failed to add class member : Component IC1 L7806CV
+Add Class Member: Failed to add class member : Component IC2 LM7812ACT
+Add Class Member: Failed to add class member : Component J1 2060-452_998-404

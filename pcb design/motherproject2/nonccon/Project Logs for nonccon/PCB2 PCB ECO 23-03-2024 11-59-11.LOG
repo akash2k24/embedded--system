@@ -1,0 +1,113 @@
+Add Component: Footprint Not Found CAPPRD500W60D1250H2500
+Add Component: Footprint Not Found CAPPRD500W60D1250H2500
+Add Component: Footprint Not Found CAPPRD500W60D1250H2500
+Add Component: Footprint Not Found CAPPRD500W60D1250H2500
+Added Component: Designator=D1(DIOAD1405W86L465D235)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "1N4007-E3/73"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/1n4007-e373/vishay?region=europe"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://mouser.componentsearchengine.com/Datasheets/2/1N4007-E3_73.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "1N4007-E3/73"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "625-1N4007-E3/73"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Vishay-General-Semiconductor/1N4007-E3-73?qs=N4vtoAxH%2FSqT3Ng3e4K0Gw%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=D2(DIOAD1405W86L465D235)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "1N4007-E3/73"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/1n4007-e373/vishay?region=europe"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://mouser.componentsearchengine.com/Datasheets/2/1N4007-E3_73.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "1N4007-E3/73"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "625-1N4007-E3/73"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Vishay-General-Semiconductor/1N4007-E3-73?qs=N4vtoAxH%2FSqT3Ng3e4K0Gw%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=D3(DIOAD1405W86L465D235)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "1N4007-E3/73"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/1n4007-e373/vishay?region=europe"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://mouser.componentsearchengine.com/Datasheets/2/1N4007-E3_73.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "1N4007-E3/73"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "625-1N4007-E3/73"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Vishay-General-Semiconductor/1N4007-E3-73?qs=N4vtoAxH%2FSqT3Ng3e4K0Gw%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=D4(DIOAD1405W86L465D235)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "1N4007-E3/73"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/1n4007-e373/vishay?region=europe"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://mouser.componentsearchengine.com/Datasheets/2/1N4007-E3_73.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "1N4007-E3/73"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "625-1N4007-E3/73"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Vishay-General-Semiconductor/1N4007-E3-73?qs=N4vtoAxH%2FSqT3Ng3e4K0Gw%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=IC1(D2PAK-STB35NF10T4)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "L7805ACD2T-TR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/l7805acd2t-tr/stmicroelectronics?region=europe"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "http://www.st.com/web/en/resource/technical/document/datasheet/CD00000444.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "L7805ACD2T-TR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "511-L7805ACD2T-TR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/L7805ACD2T-TR?qs=Ctxo64yJVFuOLXlPPZdJUQ%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=IC2(TO254P470X1016X2019-3P)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "LM7812ACT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/lm7812act/on-semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://datasheet.datasheetarchive.com/originals/distributors/Datasheets_SAMA/704b005d7d2d9ced5864f40b6609c1bc.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "4.7mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "onsemi"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "LM7812ACT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "512-LM7812ACT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.com/Search/Refine.aspx?Keyword=512-LM7812ACT"; VariantName = "[No Variations]"
+Added Component: Designator=J1(2060452998404)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "2060-452/998-404"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/2060-452998-404/wago-kontakttechnik-gmbh?region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.wago.com/2060-452/998-404"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "4.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Wago"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "2060-452/998-404"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=J2(2060453998404)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "2060-453/998-404"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/2060-453998-404/wago-kontakttechnik-gmbh?region=europe"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.wago.com/2060-453/998-404"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "4.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Wago"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "2060-453/998-404"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=K1(J0971CS5VDC45)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.citrelay.com/Catalog Pages/RelayCatalog/J097.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "15.3mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "CIT Relay & Switch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "J0971CS5VDC.45"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC1_N Pin=D1-1
+Added Pin To Net: NetName=NetC1_N Pin=D1-2
+Added Pin To Net: NetName=NetC1_N Pin=D2-2
+Added Pin To Net: NetName=NetC1_N Pin=D3-2
+Added Pin To Net: NetName=NetC1_N Pin=IC1-4
+Added Pin To Net: NetName=NetC1_N Pin=IC2-2
+Added Pin To Net: NetName=NetC1_N Pin=J1-2
+Added Pin To Net: NetName=NetC1_N Pin=K1-3
+Added Net: Name=NetC1_N
+Added Pin To Net: NetName=NetC1_P Pin=D2-1
+Added Pin To Net: NetName=NetC1_P Pin=D4-1
+Added Pin To Net: NetName=NetC1_P Pin=IC1-1
+Added Pin To Net: NetName=NetC1_P Pin=K1-2
+Added Net: Name=NetC1_P
+Added Pin To Net: NetName=NetC2_P Pin=IC1-3
+Added Pin To Net: NetName=NetC2_P Pin=IC2-1
+Added Net: Name=NetC2_P
+Added Pin To Net: NetName=NetC4_P Pin=IC2-3
+Added Net: Name=NetC4_P
+Added Pin To Net: NetName=NetD3_1 Pin=D3-1
+Added Pin To Net: NetName=NetD3_1 Pin=D4-2
+Added Pin To Net: NetName=NetD3_1 Pin=J1-4
+Added Net: Name=NetD3_1
+Added Pin To Net: NetName=NetJ2_1 Pin=J2-1
+Added Pin To Net: NetName=NetJ2_1 Pin=K1-1
+Added Net: Name=NetJ2_1
+Added Pin To Net: NetName=NetJ2_3 Pin=J2-3
+Added Pin To Net: NetName=NetJ2_3 Pin=K1-5
+Added Net: Name=NetJ2_3
+Added Pin To Net: NetName=NetJ2_5 Pin=J2-5
+Added Pin To Net: NetName=NetJ2_5 Pin=K1-4
+Added Net: Name=NetJ2_5
+Added Class: Name=Sheet2

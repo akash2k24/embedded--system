@@ -1,0 +1,46 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=..\create compound lib\create compound.LibPkg
+[Project2]
+ProjectPath=..\KDS184\KDS184.LibPkg
+[Project3]
+ProjectPath=..\KIA431AMZ\KIA431AMZ.LibPkg
+[Project4]
+ProjectPath=..\MDD5N40RH\MDD5N40RH.LibPkg
+[Project5]
+ProjectPath=..\multisheet\multisheet create compound\multisheet create compound.PrjPcb
+[Project6]
+ProjectPath=..\SIM5025\SIM5025.LibPkg
+[Project7]
+ProjectPath=..\Z02W22VY\Z02W22VY.LibPkg
+[Project8]
+ProjectPath=..\PD32A0-DrV\PD32A0-DrV.LibPkg
+[Project9]
+ProjectPath=..\SMAW200A\SMAW200A.LibPkg
+[Project10]
+ProjectPath=..\KIA2431AS\KIA2431AS.LibPkg
+[Project11]
+ProjectPath=E:\pcb design\motherproject1\Project Outputs for mosfet1\mosfet1\mosfet1.LibPkg
+[Project12]
+ProjectPath=E:\pcb design\motherproject1\Project Outputs for PS2561A\PS2561A\PS2561A.LibPkg
+[Project13]
+ProjectPath=E:\pcb design\motherproject1\Project Outputs for RM812100K\RM812100K\RM812100K.LibPkg
+[Project14]
+ProjectPath=E:\pcb design\motherproject1\Project Outputs for 18DAC-18D5A\18DAC-18D5A\18DAC-18D5A.LibPkg
+[Project15]
+ProjectPath=E:\pcb design\motherproject1\Project Outputs for LX801GPD32G0S\LX801GPD32G0S\LX801GPD32G0S.LibPkg
+[Project16]
+ProjectPath=E:\pcb design\motherproject1\Project Outputs for STRW6053S\STRW6053S\STRW6053S.LibPkg
+[Project17]
+ProjectPath=E:\pcb design\motherproject1\Project Outputs for VX801SINR12D751\VX801SINR12D751\VX801SINR12D751.LibPkg
+[Project18]
+ProjectPath=E:\pcb design\motherproject1\Project Outputs for ZDM801KDZ18\ZDM801KDZ18\ZDM801KDZ18.LibPkg
+[Project19]
+ProjectPath=E:\pcb design\motherproject1\Project Outputs for KIA431AMZ\KIA431AMZ\KIA431AMZ.LibPkg
+[Project20]
+ProjectPath=E:\pcb design\motherproject1\Project Outputs for Z02W18VY\Z02W18VY\Z02W18VY.LibPkg
+[Project21]
+ProjectPath=E:\pcb design\motherproject1\Project Outputs for SMAW200-H14\SMAW200-H14\SMAW200-H14.LibPkg
+[Project22]
+ProjectPath=E:\pcb design\motherproject1\Project Outputs for DM858SB315-MR\DM858SB315-MR\DM858SB315-MR.LibPkg
